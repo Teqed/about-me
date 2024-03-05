@@ -8,47 +8,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Timothy Quilling">
     <link rel="stylesheet" type="text/css" href="normalize.css">
-    <!-- <link rel="stylesheet" type="text/css" href="skeleton.css"> -->
+    <link rel="stylesheet" type="text/css" href="skeleton.css">
     <link rel="stylesheet" type="text/css" href="main.css">
     <link rel="icon" type="image/ico" href="/favicon.ico">
     <link rel="me" href="https://mastodon.shatteredsky.net/@teq">
 </head>
 
 <body>
-    <header>
-        <div class="fancyPositioning">
-            <div class="tleft">
-                <h1>
-                    Timothy Quilling
-                </h1>
-                <nav>
-                    <div id="horizontalnav">
-                        <ul>
-                            <li><a href="/">About</a></li>
-                            <li><a href="/blog">Blog</a></li>
-                        </ul>
-                    </div>
-                </nav>
+    <header class="container">
+        <div class="row">
+            <div class="nine columns">
+                <div class="u-pull-left">
+                    <h1>
+                        Timothy Quilling
+                    </h1>
+                    <nav>
+                        <div id="horizontalnav">
+                            <ul>
+                                <li><a href="/">About</a></li>
+                                <li><a href="/blog">Blog</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
             </div>
-            <div class="picture-right">
+            <div class="u-pull-right ">
                 <img class=avatar src="png/me.png" title="Timothy Quilling" alt="person wearing suit and smiling" width="100px">
             </div>
         </div>
+        <div class="u-cf"></div>
         <hr>
     </header>
-    <section id="middle">
-        <h2>About</h2>
-        <p>Hello, I am Timothy E. Quilling, also known as Teq, American software developer and BSc IT.</p>
-        <p>My work has primarily been with infrastructure for the US departments of public safety.</p>
-        <p>Originally from Orlando, I enjoy cinema, biking, and coffee. <a href="/blog">Learn more about me here.</a></p>
-        <h2>Contact</h2>
-        <p>
-            Reach out to me by email <a href="mailto:teqed@shatteredsky.net">teqed@shatteredsky.net</a> (<a href="https://openpgpkey.shatteredsky.net/pgp.txt">PGP</a>) or <a href="https://mastodon.shatteredsky.net/@teq">ActivityPub</a>.
-        </p>
-    </section>
-    <footer>
+    <div class="middle container">
+        <section>
+            <h3>About</h3>
+            <p>Hello, I am Timothy E. Quilling, also known as Teq, American software developer and BSc IT.</p>
+            <p>My work has primarily been with infrastructure for the US departments of public safety.</p>
+            <p>Originally from Orlando, I enjoy cinema, biking, and coffee. <a href="/blog">Learn more about me here.</a></p>
+        </section>
+        <section>
+            <h3>Contact</h3>
+            <p>
+                Reach out to me by email <a href="mailto:teqed@shatteredsky.net">teqed@shatteredsky.net</a> (<a href="https://openpgpkey.shatteredsky.net/pgp.txt">PGP</a>) or <a href="https://mastodon.shatteredsky.net/@teq">ActivityPub</a>.
+            </p>
+        </section>
+    </div>
+    <footer class="container">
         <hr>
-        <div id="socials">
+        <div class="socials">
             <a href="mailto:teqed@shatteredsky.net"><img class="icon" src="svg/mail.svg" title="Mail" width="50px"></a>
             <a href="https://mastodon.shatteredsky.net/@teq"><img class="icon" src="svg/mastodon.svg" title="Mastodon" width="50px"></a>
             <a href="https://github.com/Teqed/"><img class="icon" src="svg/github.svg" title="GitHub" width="50px"></a>
