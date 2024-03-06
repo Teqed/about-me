@@ -28,9 +28,6 @@ hr {
 	border-color: #d9d9d9;
 }
 
-h4 {
-	margin-left: 2.16666666667%;
-}
 
 body {
 	margin: 2em auto;
@@ -57,12 +54,17 @@ html {
 }
 
 h1 { font-size: 6.5vw; line-height: 1.2;  letter-spacing: -.1rem;}
-h2 { font-size: 4vw; line-height: 1.25; letter-spacing: -.1rem; }
+h2 { 
+	margin-left: 2.16666666667%;
+	font-size: 2.4rem;
+	line-height: 1.35;
+	letter-spacing: -.08rem;
+}
 
 @media (min-width: 750px) {
 	h1 { font-size: 5.0rem; }
-	h2 { font-size: 4.2rem; }
 }
+
 
 .nav {
 	height: 4.5vw;
