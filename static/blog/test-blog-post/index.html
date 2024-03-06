@@ -7,50 +7,47 @@
     <title>Timothy Quilling</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Timothy Quilling">
-    <link rel="stylesheet" type="text/css" href="../../main.css">
-    <link rel="icon" type="image/ico" href="../../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/skeleton.css">
+    <link rel="stylesheet" type="text/css" href="/main.css">
+    <link rel="icon" type="image/ico" href="/favicon.ico">
+    <link rel="me" href="https://mastodon.shatteredsky.net/@teq">
 </head>
 
 <body>
-    <header>
-        <div class="fancyPositioning">
-            <div class="tleft">
-                <h1>
-                    Timothy Quilling
-                </h1>
+    <header class="container">
+        <div class="row">
+            <div class="u-pull-left nine columns">
+                <h1>Timothy Quilling</h1>
                 <nav>
-                    <div id="horizontalnav">
-                        <ul>
-                            <li><a href="../../">About</a></li>
-                            <li><a href="../../blog">Blog</a></li>
-                        </ul>
-                    </div>
+                    <a class="nav button offset-by-quarter column" href="/">About</a>
+                    <a class="nav button column" href="/blog">Blog</a>
                 </nav>
             </div>
-            <div class="picture-right">
-                <img class=avatar src="../../png/me.png" title="Timothy Quilling" alt="person wearing suit and smiling">
-            </div>
+            <img class="u-pull-right avatar three columns" src="/png/me.png" title="Timothy Quilling" alt="person wearing suit and smiling" width="120px">
         </div>
         <hr>
     </header>
-    <section id="middle">
-        <h2>Test Blog Post</h2>
+    <div class="middle container">
+    <section>
+        <h4>Test Blog Post</h4>
         <p>
             This is a test blog post.
         </p>
         <p>A few paragraphs of Lorem Ipsum go here.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec odio nec nunc tincidunt tincidunt</p>
     </section>
-    <footer>
+    </div>
+    <footer class="container">
         <hr>
-        <div id="socials">
-            <a href="mailto:teqed@shatteredsky.net"><img src="../../svg/mail.svg" title="Mail" class="icon"></a>
-            <a href="https://mastodon.shatteredsky.net/@teq"><img src="../../svg/mastodon.svg" title="Mastodon" class="icon"></a>
-            <a href="https://github.com/Teqed/"><img src="../../svg/github.svg" title="GitHub" class="icon"></a>
-            <a href="https://www.linkedin.com/in/timothy-q-955885a4/"><img src="../../svg/linkedin.svg" title="LinkedIn" class="icon"></a>
-            <a href="https://bsky.app/profile/shatteredsky.net"><img src="../../svg/bluesky.svg" title="BlueSky" class="icon"></a>
-            <a href="https://www.threads.net/@teqed"><img src="../../svg/threads.svg" title="Threads" class="icon"></a>
-            <a href="https://twitter.com/Teqnician"><img src="../../svg/twitter.svg" title="Twitter" class="icon"></a>
+        <div class="row socials">
+            <a href="mailto:teqed@shatteredsky.net"><img class="icon" src="/svg/mail.svg" title="Mail" width="50px"></a>
+            <a href="https://mastodon.shatteredsky.net/@teq"><img class="icon" src="/svg/mastodon.svg" title="Mastodon" width="50px"></a>
+            <a href="https://github.com/Teqed/"><img class="icon" src="/svg/github.svg" title="GitHub" width="50px"></a>
+            <a href="https://www.linkedin.com/in/timothy-q-955885a4/"><img class="icon" src="/svg/linkedin.svg" title="LinkedIn" width="50px"></a>
+            <a href="https://bsky.app/profile/shatteredsky.net"><img class="icon" src="/svg/bluesky.svg" title="BlueSky" width="50px"></a>
+            <a href="https://www.threads.net/@teqed"><img class="icon" src="/svg/threads.svg" title="Threads" width="50px"></a>
+            <a href="https://twitter.com/Teqnician"><img class="icon" src="/svg/twitter.svg" title="Twitter" width="50px"></a>
         </div>
     </footer>
 </body>
