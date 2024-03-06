@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="/main.css">
     <link rel="icon" type="image/ico" href="/favicon.ico">
     <link rel="me" href="https://mastodon.shatteredsky.net/@teq">
+    <link rel="preload" as="image" href="/png/me.webp" type="image/webp">
 </head>
 
 <body>
@@ -24,11 +25,14 @@
                     <a class="nav button column" href="/blog">Blog</a>
                 </nav>
             </div>
-            <img class="u-pull-right avatar three columns" src="/png/me.png" title="Timothy Quilling" alt="person wearing suit and smiling" width="120px">
+            <picture>
+                <source srcset="/png/me.webp" type="image/webp">
+                <img class="u-pull-right avatar" src="/png/me.png" title="Timothy Quilling" alt="person wearing suit and smiling" width="120" height="120">
+            </picture>
         </div>
         <hr>
     </header>
-    <div class="middle container">
+    <div class="container" style="min-height: 50dvh;">
     <section>
         <h2>Test Blog Post</h2>
         <p>
@@ -40,14 +44,14 @@
     </div>
     <footer class="container">
         <hr>
-        <div class="row socials">
-            <a href="mailto:teqed@shatteredsky.net"><img class="icon" src="/svg/mail.svg" title="Mail" width="50px"></a>
-            <a href="https://mastodon.shatteredsky.net/@teq"><img class="icon" src="/svg/mastodon.svg" title="Mastodon" width="50px"></a>
-            <a href="https://github.com/Teqed/"><img class="icon" src="/svg/github.svg" title="GitHub" width="50px"></a>
-            <a href="https://www.linkedin.com/in/timothy-q-955885a4/"><img class="icon" src="/svg/linkedin.svg" title="LinkedIn" width="50px"></a>
-            <a href="https://bsky.app/profile/shatteredsky.net"><img class="icon" src="/svg/bluesky.svg" title="BlueSky" width="50px"></a>
-            <a href="https://www.threads.net/@teqed"><img class="icon" src="/svg/threads.svg" title="Threads" width="50px"></a>
-            <a href="https://twitter.com/Teqnician"><img class="icon" src="/svg/twitter.svg" title="Twitter" width="50px"></a>
+        <div class="row" style="display: flex; justify-content: center; align-items: center;">
+            <a href="mailto:teqed@shatteredsky.net"><img class="icon" src="/svg/mail.svg" title="Mail" width="50" height="50"></a>
+            <a href="https://mastodon.shatteredsky.net/@teq"><img class="icon" src="/svg/mastodon.svg" title="Mastodon" width="50" height="50"></a>
+            <a href="https://github.com/Teqed/"><img class="icon" src="/svg/github.svg" title="GitHub" width="50" height="50"></a>
+            <a href="https://www.linkedin.com/in/timothy-q-955885a4/"><img class="icon" src="/svg/linkedin.svg" title="LinkedIn" width="50" height="50"></a>
+            <a href="https://bsky.app/profile/shatteredsky.net"><img class="icon" src="/svg/bluesky.svg" title="BlueSky" width="50" height="50"></a>
+            <a href="https://www.threads.net/@teqed"><img class="icon" src="/svg/threads.svg" title="Threads" width="50" height="50"></a>
+            <a href="https://twitter.com/Teqnician"><img class="icon" src="/svg/twitter.svg" title="Twitter" width="50" height="50"></a>
         </div>
     </footer>
 </body>

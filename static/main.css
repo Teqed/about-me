@@ -1,25 +1,19 @@
 .avatar {
     border-radius: 50%;
+	height: 22%;
 	max-height: 120px;
+	width: 22%;
 	max-width: 120px;
 }
 
 .icon {
     border-radius: 50%;
+	height: 3dvh;
     width: 3dvh;
 	min-width: 30px;
+	min-height: 30px;
     margin-left: 0.25em;
     margin-right: 0.25em;
-}
-
-.socials {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.middle {
-	min-height: 50dvh;
 }
 
 hr {
@@ -27,7 +21,6 @@ hr {
 	margin-bottom: 1.7rem;
 	border-color: #d9d9d9;
 }
-
 
 body {
 	margin: 2em auto;
@@ -68,7 +61,6 @@ h2 {
 @media (min-width: 750px) {
 	h1 { font-size: 5.0rem; }
 }
-
 
 .nav {
 	height: 4.5vw;
