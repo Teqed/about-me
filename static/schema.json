@@ -1,0 +1,119 @@
+{
+    "@context": "https://schema.org/",
+    "@graph":[
+        {
+            "@type":"WebPage",
+            "@id":"https://quilling.dev/",
+            "url":"https://quilling.dev",
+            "name":"About Timothy Quilling",
+            "isPartOf":{
+                "@id":"https://quilling.dev/#website"
+            },
+            "about":{
+                "@id":"https://quilling.dev/#person"
+            },
+            "datePublished":"2024-03-06T05:30:13+0000",
+            "dateModified":"2024-03-06T05:30:13+0000",
+            "description":"Timothy Quilling is an American software engineer.",
+            "breadcrumb":{
+                "@id":"https://quilling.dev#breadcrumb"
+            },
+            "inLanguage":"en-US",
+            "potentialAction":[{
+                "@type":"ReadAction",
+                "target":["https://quilling.dev"]
+            }]
+        },
+        {
+            "@type":"BreadcrumbList",
+            "@id":"https://quilling.dev#breadcrumb",
+            "itemListElement": [{
+              "@type": "ListItem",
+              "position": 1,
+              "name": "About",
+              "item": "https://quilling.dev/"
+            },{
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://quilling.dev/blog/"
+            }]
+        },
+        {
+            "@type":"WebSite",
+            "@id":"https://quilling.dev/#website",
+            "url":"https://quilling.dev/",
+            "name":"Timothy Quilling",
+            "description":"Homepage for Timothy Quilling",
+            "publisher":{
+                "@id":"https://quilling.dev/#person"
+            },
+            "potentialAction":[{
+                "@type":"SearchAction",
+                "target":{
+                    "@type":"EntryPoint",
+                    "urlTemplate":"https://quilling.dev/?s={search_term_string}"
+                },
+                "query-input":"required name=search_term_string"
+            }],
+            "inLanguage":"en-US"
+        },
+        {
+            "@type": "ProfilePage",
+            "dateCreated": "2024-03-06T05:30:13+0000",
+            "dateModified": "2024-03-06T05:30:13+0000",
+            "name":"Timothy Quilling",
+            "mainEntity": {
+                "@id":"https://quilling.dev/#person"
+            }
+        },
+        {
+            "@type": "Person",
+            "name": "Timothy Quilling",
+            "alternateName": "teq",
+            "url":"https://quilling.dev/",
+            "description": "American software developer",
+            "image": "https://quilling.dev/png/me.webp",
+            "sameAs": [
+            "https://mastodon.shatteredsky.net/@teq",
+            "https://github.com/Teqed/",
+            "https://www.linkedin.com/in/timothy-q-955885a4/",
+            "https://bsky.app/profile/shatteredsky.net",
+            "https://www.threads.net/@teqed",
+            "https://twitter.com/Teqnician",
+            "https://www.youtube.com/@teqed",
+            "https://instagram.com/teqed/"
+            ],
+            "worksFor":{
+                "@type":"Organization",
+                "@id":"https://centralsquare.wpengine.com/#organization",
+                "name":"CentralSquare Technologies",
+                "url":"https://centralsquare.wpengine.com/",
+                "logo":{
+                    "@type":"ImageObject",
+                    "inLanguage":"en-US",
+                    "@id":"https://centralsquare.wpengine.com/#/schema/logo/image/",
+                    "url":"https://centralsquare.wpengine.com/wp-content/uploads/2022/06/centralsquare_logo.svg",
+                    "contentUrl":"https://centralsquare.wpengine.com/wp-content/uploads/2022/06/centralsquare_logo.svg",
+                    "width":"1024",
+                    "height":
+                    "1024",
+                    "caption":"CentralSquare Technologies"
+                },
+                "image":{"@id":"https://centralsquare.wpengine.com/#/schema/logo/image/"}
+            },
+            "jobTitle":{
+                "@type":"DefinedTerm",
+                "name":"System Administrator",
+                "alternateName":"administrator",
+                "sameAs":"https://resources.workable.com/systems-engineer-job-description"
+            },
+            "alumniOf":{
+                "@type":"Organization",
+                "name":"Seminole State College of Florida",
+                "@id":"https://www.wikidata.org/wiki/Q7449539"
+            },
+            "knowsLanguage":"english"
+        }
+    ]   
+}
