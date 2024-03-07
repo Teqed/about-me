@@ -2,29 +2,6 @@
     "@context": "https://schema.org/",
     "@graph":[
         {
-            "@type":"WebPage",
-            "@id":"https://quilling.dev/",
-            "url":"https://quilling.dev",
-            "name":"About Timothy Quilling",
-            "isPartOf":{
-                "@id":"https://quilling.dev/#website"
-            },
-            "about":{
-                "@id":"https://quilling.dev/#person"
-            },
-            "datePublished":"2024-03-06T05:30:13+0000",
-            "dateModified":"2024-03-06T05:30:13+0000",
-            "description":"Timothy Quilling is an American software engineer.",
-            "breadcrumb":{
-                "@id":"https://quilling.dev#breadcrumb"
-            },
-            "inLanguage":"en-US",
-            "potentialAction":[{
-                "@type":"ReadAction",
-                "target":["https://quilling.dev"]
-            }]
-        },
-        {
             "@type":"BreadcrumbList",
             "@id":"https://quilling.dev#breadcrumb",
             "itemListElement": [{
@@ -60,15 +37,33 @@
         },
         {
             "@type": "ProfilePage",
-            "dateCreated": "2024-03-06T05:30:13+0000",
-            "dateModified": "2024-03-06T05:30:13+0000",
-            "name":"Timothy Quilling",
+            "@id":"https://quilling.dev/",
+            "url":"https://quilling.dev",
+            "name":"About Timothy Quilling",
+            "isPartOf":{
+                "@id":"https://quilling.dev/#website"
+            },
+            "about":{
+                "@id":"https://quilling.dev/#person"
+            },
+            "datePublished":"2024-03-06T05:30:13+0000",
+            "dateModified":"2024-03-06T05:30:13+0000",
+            "description":"Timothy Quilling is an American software engineer.",
+            "breadcrumb":{
+                "@id":"https://quilling.dev#breadcrumb"
+            },
+            "inLanguage":"en-US",
+            "potentialAction":[{
+                "@type":"ReadAction",
+                "target":["https://quilling.dev"]
+            }],
             "mainEntity": {
                 "@id":"https://quilling.dev/#person"
             }
         },
         {
             "@type": "Person",
+            "@id":"https://quilling.dev#person",
             "name": "Timothy Quilling",
             "alternateName": "teq",
             "url":"https://quilling.dev/",
