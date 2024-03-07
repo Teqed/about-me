@@ -11,7 +11,6 @@
     <link rel="stylesheet" type="text/css" href="/skeleton.css">
     <link rel="stylesheet" type="text/css" href="/main.css">
     <link rel="icon" type="image/ico" href="/favicon.ico">
-    <link rel="me" href="https://mastodon.shatteredsky.net/@teq">
     <link rel="preload" as="image" href="/png/me.webp" type="image/webp">
 </head>
 
@@ -33,13 +32,13 @@
         <hr>
     </header>
     <div class="container" style="min-height: 50dvh;">
-        <section>
-        <h2>Blog</h2>
-        <p>
-            <ul>
-                <li><a href="/blog/message-CPA4072">Resolving CPA4072</a></li>
-            </ul>
-        </p>
+    <section>
+        <h2>Message CPA4072</h2>
+        <p>A common message to receive on the AS/400 IBMi system while doing a routine task is CPA4072, "Maximum number of records reached for file" with the problematic file listed.</p>
+        <p>You can think of these file objects as tables which have a predetermined number of rows. When we attempt to add more records and reach the limit, the CPA4072 message can be triggered. It will halt the system until a response is given about what to do to recover from the error.</p>
+        <p>My recommended course of action if you're not familiar with the job or file triggering the message would be to respond "999999" which will increase the number of records in the file by 999,999.</p>
+        <p>Alternatively, if you recognize the triggering job or file, you could set the max records parameter (MAXRCDS) to the *NOMAX value by replying with "NOMAX". This will allow the file to continue to grow without a limitation. You may want to be cautious about your disk space usage -- if the job editing this file is runaway, you may allow it to fill your storage capacity.</p>
+        <p>After giving any response to the message, the job will continue to run and the system will be back to normal.</p>
     </section>
     </div>
     <footer class="container">
@@ -48,7 +47,7 @@
             <a href="mailto:teqed@shatteredsky.net"><img class="icon" src="/svg/mail.svg" title="Mail" alt="My email is teqed@shatteredsky.net" width="50" height="50"></a>
             <a href="https://mastodon.shatteredsky.net/@teq"><img class="icon" src="/svg/mastodon.svg" title="Mastodon" alt="My Mastodon profile" width="50" height="50"></a>
             <a href="https://github.com/Teqed/"><img class="icon" src="/svg/github.svg" title="GitHub" alt="My GitHub profile" width="50" height="50"></a>
-            <a href="https://www.linkedin.com/in/timothy-q-955885a4/"><img class="icon" src="/svg/linkedin.svg" title="LinkedIn" alt="My LinkedIn profile" width="50" height="50"></a>
+            <a href="https://www.linkedin.com/in/teqed/"><img class="icon" src="/svg/linkedin.svg" title="LinkedIn" alt="My LinkedIn profile" width="50" height="50"></a>
             <a href="https://bsky.app/profile/shatteredsky.net"><img class="icon" src="/svg/bluesky.svg" title="BlueSky" alt="My BlueSky profile" width="50" height="50"></a>
             <a href="https://www.threads.net/@teqed"><img class="icon" src="/svg/threads.svg" title="Threads" alt="My Threads profile" width="50" height="50"></a>
             <a href="https://twitter.com/Teqnician"><img class="icon" src="/svg/twitter.svg" title="Twitter" alt="My Twitter profile" width="50" height="50"></a>
