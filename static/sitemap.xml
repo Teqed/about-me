@@ -8,13 +8,18 @@
 
 <url>
   <loc>https://quilling.dev/</loc>
-  <lastmod>2024-03-06T05:30:13+0000</lastmod>
+  <lastmod>2024-03-07T07:31:05+0000</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://quilling.dev/blog/</loc>
-  <lastmod>2024-03-06T03:05:17+00:00</lastmod>
+  <lastmod>2024-03-07T07:31:05+0000</lastmod>
   <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://quilling.dev/blog/message-CPA4072</loc>
+  <lastmod>2024-03-07T07:31:05+0000</lastmod>
+  <priority>0.20</priority>
 </url>
 
 
