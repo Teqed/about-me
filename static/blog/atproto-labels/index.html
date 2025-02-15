@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#ffffff">
+    <title>Timothy Quilling</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Timothy Quilling">
+    <link rel="stylesheet" type="text/css" href="/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/skeleton.css">
+    <link rel="stylesheet" type="text/css" href="/main.css">
+    <link rel="icon" type="image/ico" href="/favicon.ico">
+    <link rel="me" href="https://mastodon.shatteredsky.net/@teq">
+    <link rel="preload" as="image" href="/png/me.webp" type="image/webp">
+</head>
+
+<body>
+    <header class="container">
+        <div class="row">
+            <div class="u-pull-left nine columns">
+                <h1>Timothy Quilling</h1>
+                <nav>
+                    <a class="nav button offset-by-quarter column" href="/">About</a>
+                    <a class="nav button column" href="/blog">Blog</a>
+                </nav>
+            </div>
+            <picture>
+                <source srcset="/png/me.webp" type="image/webp">
+                <img class="u-pull-right avatar" src="/png/me.png" title="Timothy Quilling" alt="person wearing suit and smiling" width="120" height="120">
+            </picture>
+        </div>
+        <hr>
+    </header>
+    <div class="container" style="min-height: 50dvh;">
+    <section>
+        <h2>AT-Proto Label Services</h2>
+        <p>Labels (<code>com.atproto.label.defs#label</code>) are <a href="https://atproto.com/specs/label#schema-and-data-model">defined</a> with the following fields:</p>
+        <pre><code class="lang-rust"><span class="hljs-meta">#[derive(serde::Serialize)]</span>
+        <span class="hljs-comment">/// Label response content.</span>
+        <span class="hljs-comment">/// All timestamps are RFC 3339 and ISO 8601 date and time strings with milliseconds (3 subsecond digits) and Z timezone.</span>
+        <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">Label</span></span> {
+            <span class="hljs-comment">/// Expiration only provided if this label automatically expires and ceases to be applied.</span>
+            <span class="hljs-meta">#[serde(skip_serializing_if = <span class="hljs-meta-string">"Option::is_none"</span>)]</span>
+            exp: <span class="hljs-built_in">Option</span>&lt;<span class="hljs-built_in">String</span>&gt;,
+            <span class="hljs-comment">/// CID only provided if this label applies to a specific version of a record.</span>
+            <span class="hljs-meta">#[serde(skip_serializing_if = <span class="hljs-meta-string">"Option::is_none"</span>)]</span>
+            cid: <span class="hljs-built_in">Option</span>&lt;<span class="hljs-built_in">String</span>&gt;,
+            <span class="hljs-comment">/// Created timestamp of the label, self-reported by the label source.</span>
+            cts: <span class="hljs-built_in">String</span>,
+            <span class="hljs-comment">/// Negation flag. Indicates that this label "negates" an earlier label with the same "src", "uri", and "val".</span>
+            <span class="hljs-meta">#[serde(skip_serializing_if = <span class="hljs-meta-string">"bool_is_false"</span>)]</span>
+            neg: <span class="hljs-keyword">bool</span>,
+            <span class="hljs-comment">/// Signature of encoded label. Discarded when sent to clients.</span>
+            sig: [<span class="hljs-keyword">u8</span>; <span class="hljs-number">64</span>],
+            <span class="hljs-comment">/// DID of the label service which provides a key and label definitions for this label.</span>
+            src: <span class="hljs-built_in">String</span>,
+            <span class="hljs-comment">/// DID of the account, or URI of the specific record, that this label applies to.</span>
+            uri: <span class="hljs-built_in">String</span>,
+            <span class="hljs-comment">/// The &lt;=128 character string name of the value or type of this label.</span>
+            val: <span class="hljs-built_in">String</span>,
+            <span class="hljs-comment">/// Version of label schema -- currently always 1.</span>
+            ver: <span class="hljs-keyword">u64</span>,
+        }
+        </code></pre>
+        <p>The label&#39;s <code>src</code> is used to lookup the <code>#atproto_label</code> verification method which is the public key used to validate the <code>sig</code> field.</p>
+        <p>Each label&#39;s <code>val</code> is a key used to reference a label definition defined at the labeling service account&#39;s <code>app.bsky.labeler.service/self</code> record. Publishing this record converts an account into a labeler. The label value should exist in the <code>labelValues</code> array as well as have a corresponding <code>labelValueDefinitions</code> entry in a relevant locale.</p>
+        <pre><code class="lang-json">{
+          <span class="hljs-attr">"$type"</span>: <span class="hljs-string">"app.bsky.labeler.service"</span>,
+          <span class="hljs-attr">"policies"</span>: {
+            <span class="hljs-attr">"labelValues"</span>: [
+              <span class="hljs-string">"example"</span>
+            ],
+            <span class="hljs-attr">"labelValueDefinitions"</span>: [
+              {
+                <span class="hljs-attr">"blurs"</span>: <span class="hljs-string">"none"</span>,
+                <span class="hljs-attr">"locales"</span>: [
+                  {
+                    <span class="hljs-attr">"lang"</span>: <span class="hljs-string">"en"</span>,
+                    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Example Label"</span>,
+                    <span class="hljs-attr">"description"</span>: <span class="hljs-string">"This is an example label."</span>
+                  }
+                ],
+                <span class="hljs-attr">"severity"</span>: <span class="hljs-string">"inform"</span>,
+                <span class="hljs-attr">"adultOnly"</span>: <span class="hljs-literal">false</span>,
+                <span class="hljs-attr">"identifier"</span>: <span class="hljs-string">"example"</span>,
+                <span class="hljs-attr">"defaultSetting"</span>: <span class="hljs-string">"warn"</span>
+              }
+            ]
+          },
+          <span class="hljs-attr">"createdAt"</span>: <span class="hljs-string">"2025-01-01T01:01:01.000Z"</span>
+        }
+        </code></pre>
+        <p>The AppView consumes labels from label services over a WebSocket <a href="https://atproto.com/specs/event-stream">event stream</a>. Each label is sent as bytes, with a header concatenated to the message body.</p>
+        <p>The header determines the message type and operation:</p>
+        <pre><code class="lang-json">{
+          <span class="hljs-attr">"t"</span>: <span class="hljs-string">"#labels"</span>,
+          <span class="hljs-attr">"op"</span>: <span class="hljs-number">1</span>
+        }
+        </code></pre>
+        <p>Every message over the <code>subscribeLabels</code> endpoint begins with this header, adding a small amount of overhead. When serialized to bytes with DAG-<a href="https://www.rfc-editor.org/rfc/rfc8949">CBOR</a> and represented in hex, the header should look like <code>a2617467236c6162656c73626f7001</code>. You can take this to a <a href="https://cbor.me/">CBOR decoder</a> to see these bytes expanded back into diagnostic notation. Here&#39;s what the bytes look like when mapped to the diagnostic notation:</p>
+        <pre><code>A2                   # map(<span class="hljs-number">2</span>)
+           <span class="hljs-number">61</span>                # text(<span class="hljs-number">1</span>)
+              <span class="hljs-number">74</span>             # <span class="hljs-string">"t"</span>
+           <span class="hljs-number">67</span>                # text(<span class="hljs-number">7</span>)
+              <span class="hljs-number">236</span>C6162656C73 # <span class="hljs-string">"#labels"</span>
+           <span class="hljs-number">62</span>                # text(<span class="hljs-number">2</span>)
+              <span class="hljs-number">6</span>F70           # <span class="hljs-string">"op"</span>
+           <span class="hljs-number">01</span>                # unsigned(<span class="hljs-number">1</span>)
+        </code></pre><p><code>A2</code> in binary is <code>10100010</code>. The bits <code>1010</code> tell us that this is a map. The bits <code>0010</code> tell us that the map has two elements. \
+        <code>61</code> in binary is <code>01100001</code>. The bits <code>0110</code> tell us that this is a text string. The bits <code>0001</code> tell us that the text string is a single byte in ASCII. \
+        <code>74</code> is the ASCII code for <code>t</code>. \
+        <code>67</code> in binary is <code>01100111</code>. The bits <code>0110</code> tell us that this is a text string again, but this time <code>0111</code> tells us that the text string is 7 bytes long. \
+        <code>236C6162656C73</code> is the ASCII representation of <code>#labels</code>. \
+        <code>62</code> in binary is <code>01100010</code>. The bits <code>0110</code> tell us that this is a text string again, but this time <code>0010</code> tells us that the text string is 2 bytes long. \
+        <code>6F70</code> is the ASCII representation of <code>op</code>. \
+        <code>01</code> is our termination byte, telling us that the map is complete.</p>
+        <p>The label is encoded in the same manner, and its bytes concatenated to the header. These are served over the <code>com.atproto.label.subscribeLabels</code> endpoint as a realtime subscription of all labels, with cursor playback allowed from sequence <code>0</code>.</p>
+        <p>Labels are often also served on the <code>com.atproto.label.queryLabels</code> endpoint, but not consumed by the AppView over this method, and is not required for serving labels. Some label services also implement <code>com.atproto.report.createReport</code> which allows the filing of reports, and also appears to be the endpoint appeals are sent to.</p>
+        <p>The rate limit for emitting labels is <a href="https://github.com/bluesky-social/ozone/issues/107#issuecomment-2084354007">5/sec, 5k/hr, and 50k/day</a>. It&#39;s been said that the developer experience of ingesting labels is <a href="https://github.com/bluesky-social/atproto/discussions/3329#discussioncomment-11769383">pretty bad right now</a> and may be improved in the future, but you should keep these limits in mind for the scope of your labeler project. At this time, automated labeling at full-firehose scale across all locales can pose a challenge for third-party labelers. Bluesky&#39;s own moderation labeler does not have this limitation.</p>
+        <p>Assuming you are within rate limits, emitted labels are usually consumed from Bluesky&#39;s two vortex clients for the AppView within a minute. If you make a request against an endpoint like <code>getProfile</code> with the <code>atproto-accept-labelers</code> header set to the DID of the label service, the AppView will return any accepted labels in the response, which is used by the client to visually display the labels. You will not get any feedback for labels the AppView rejected, such as labels with invalid signatures. The AppView can provide labels which the Bluesky client may not consider valid, such as labels with numerals in their <code>val</code> field.</p>
+        <p>The AppView does not display labels with a <code>neg</code> field set to <code>true</code>, only using these to invalidate previous labels. The AppView will also not display labels with an <code>exp</code> field set that has passed, as these labels have expired and are no longer valid.</p>
+        
+    </section>
+    </div>
+    <footer class="container">
+        <hr>
+        <div class="row" style="display: flex; justify-content: center; align-items: center;">
+            <a href="mailto:teqed@shatteredsky.net"><img class="icon" src="/svg/mail.svg" title="Mail" alt="My email is teqed@shatteredsky.net" width="50" height="50"></a>
+            <a href="https://bsky.app/profile/did:plc:jrtgsidnmxaen4offglr5lsh"><img class="icon" src="/svg/bluesky.svg" title="Bluesky" alt="My Bluesky profile" width="50" height="50"></a>
+            <a href="https://mastodon.shatteredsky.net/@teq"><img class="icon" src="/svg/mastodon.svg" title="Mastodon" alt="My Mastodon profile" width="50" height="50"></a>
+            <a href="https://github.com/Teqed/"><img class="icon" src="/svg/github.svg" title="GitHub" alt="My GitHub profile" width="50" height="50"></a>
+            <a href="https://www.linkedin.com/in/teqed/"><img class="icon" src="/svg/linkedin.svg" title="LinkedIn" alt="My LinkedIn profile" width="50" height="50"></a>
+            <a href="https://www.youtube.com/@teqed"><img class="icon" src="/svg/youtube.svg" title="YouTube" alt="My YouTube channel" width="50" height="50"></a>
+            <a href="https://www.instagram.com/teqed/"><img class="icon" src="/svg/instagram.svg" title="Instagram" alt="My Instagram profile" width="50" height="50"></a>
+        </div>
+    </footer>
+</body>
+
+</html>
