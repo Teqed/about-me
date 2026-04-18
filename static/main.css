@@ -95,6 +95,16 @@ html {
 	overscroll-behavior: contain;
 }
 
+code {
+	background: #222426;
+	border-color: #2f3133;
+	color: #e6e6e6;
+}
+
+pre > code {
+	overflow-x: auto;
+}
+
 @media (prefers-color-scheme: light) {
 	html {
 		background-color:revert
@@ -106,6 +116,11 @@ html {
 	  color: #157A99; }
 	a:hover {
 	  color: #0B7393; }
+	code {
+		background: #F1F1F1;
+		border-color: #E1E1E1;
+		color: #222;
+	}
 }
 
 h1 { font-size: 6.5vw; line-height: 1.2;  letter-spacing: -.1rem;}
