@@ -44,6 +44,9 @@
           curl
           jq
           gawk
+          typst
+          imagemagick
+          wrangler
         ];
       in
       {
