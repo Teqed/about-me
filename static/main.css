@@ -89,7 +89,8 @@ body {
 }
 
 html {
-	background-color:#181A1B;
+	color-scheme: dark light;
+	background-color:#181A1C;
 	scroll-behavior: smooth;
 	overscroll-behavior: contain;
 }
