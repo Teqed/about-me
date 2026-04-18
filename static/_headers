@@ -1,0 +1,17 @@
+/*
+  Cache-Control: public, max-age=300
+
+/*.css
+  Cache-Control: public, max-age=3600
+
+/png/*
+  Cache-Control: public, max-age=604800
+
+/svg/*
+  Cache-Control: public, max-age=604800
+
+/pdf/*
+  Cache-Control: public, max-age=604800
+
+/favicon*
+  Cache-Control: public, max-age=604800
