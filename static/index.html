@@ -503,12 +503,9 @@
 				0 calc(-1 * var(--u)) 0 0 var(--ink),
 				calc(-1 * var(--u)) 0 0 0 var(--ink);
 		}
-		.art {
+		html:not(.js) .art {
 			background: var(--still-tall) left center / cover no-repeat;
 			image-rendering: pixelated;
-		}
-		.art.drawn {
-			background: none;
 		}
 		.ubar canvas {
 			width: 176px;
@@ -631,7 +628,7 @@
 			.plate {
 				height: calc(6 * var(--lh));
 			}
-			.art {
+			html:not(.js) .art {
 				background-image: var(--still);
 			}
 		}

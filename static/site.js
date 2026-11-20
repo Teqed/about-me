@@ -1762,7 +1762,6 @@ if (document.documentElement.classList.contains("js")) {
 	plate(false);
 	wordmark(false);
 	$("wm").classList.add("drawn");
-	$("art").classList.add("drawn");
 	feeds();
 	if (readable)
 		sprites().then(() => {
