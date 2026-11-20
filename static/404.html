@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>not found · teq</title>
+		<meta name="color-scheme" content="light">
+		<meta name="darkreader-lock">
+		<meta name="robots" content="noindex">
+		<link rel="icon" href="/favicon.ico" sizes="any">
+		<style>
+		@font-face {
+			font-family: "Departure Fallback";
+			src:
+				local("Menlo Regular"), local("Menlo-Regular"),
+				local("DejaVu Sans Mono"), local("DejaVuSansMono");
+			size-adjust: 106.1%;
+			ascent-override: 98%;
+			descent-override: 27%;
+			line-gap-override: 0%;
+		}
+		@font-face {
+			font-family: "Departure Fallback Win";
+			src: local("Consolas");
+			size-adjust: 116.2%;
+			ascent-override: 98%;
+			descent-override: 27%;
+			line-gap-override: 0%;
+		}
+		@font-face {
+			font-family: "Departure Fallback Wide";
+			src:
+				local("Liberation Mono"), local("LiberationMono"), local("Courier New"),
+				local("CourierNewPSMT"), local("Noto Sans Mono");
+			size-adjust: 106.5%;
+			ascent-override: 98%;
+			descent-override: 27%;
+			line-gap-override: 0%;
+		}
+		@font-face {
+			font-family: "Departure Mono";
+			src: url("/fonts/DepartureMono-Regular.woff2") format("woff2");
+			font-display: block;
+		}
+		* {
+			box-sizing: border-box;
+		}
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
+		:root {
+			--paper: #f2f0ea;
+			--ink: #1c1c1a;
+			--spot: #cb89a7;
+			--u: 2px;
+			--f: calc(8.25 * var(--u));
+			--lh: calc(16 * var(--u));
+			color-scheme: light;
+			--o: var(--ink);
+		}
+		body {
+			margin: 0;
+			background: var(--paper);
+			color: var(--ink);
+			font:
+				var(--f) / var(--lh) "Departure Mono",
+				"Departure Fallback",
+				"Departure Fallback Win",
+				"Departure Fallback Wide",
+				monospace;
+		}
+		.bx {
+			background-color: var(--paper);
+			box-shadow:
+				0 calc(-1 * var(--u)) 0 0 var(--o),
+				0 var(--u) 0 0 var(--o),
+				calc(-1 * var(--u)) 0 0 0 var(--o),
+				var(--u) 0 0 0 var(--o);
+		}
+		.rule {
+			background:
+				linear-gradient(var(--paper) calc(100% - var(--u)), var(--tint) 0) 0 0 /
+				100% var(--lh);
+		}
+		.sheet {
+			max-width: calc(608 * var(--u));
+			margin: 0 auto;
+			padding: calc(12 * var(--u)) calc(12 * var(--u)) calc(32 * var(--u));
+			min-height: 100dvh;
+			display: flex;
+			flex-direction: column;
+		}
+		.win {
+			position: relative;
+			padding-top: var(--lh);
+			--line: color-mix(in oklab, var(--spot) 48%, var(--ink));
+			--tint: color-mix(in oklab, var(--spot) 34%, var(--paper));
+			--o: var(--line);
+		}
+		.win > header {
+			position: absolute;
+			inset: 0 0 auto;
+			height: var(--lh);
+			display: flex;
+			align-items: flex-start;
+			gap: 1ch;
+		}
+		.tab,
+		.tab::before {
+			clip-path: polygon(
+				0 0,
+				100% 0,
+				100% calc(100% - 2 * var(--u)),
+				calc(100% - var(--u)) calc(100% - 2 * var(--u)),
+				calc(100% - var(--u)) calc(100% - var(--u)),
+				calc(100% - 2 * var(--u)) calc(100% - var(--u)),
+				calc(100% - 2 * var(--u)) 100%,
+				0 100%
+			);
+		}
+		.tab {
+			position: relative;
+			flex: none;
+			isolation: isolate;
+			background: var(--o);
+			color: var(--line);
+			padding: 0 calc(5 * var(--u)) var(--u) calc(3 * var(--u));
+			line-height: calc(var(--lh) - var(--u));
+		}
+		.tab::before {
+			content: "";
+			position: absolute;
+			z-index: -1;
+			inset: 0 var(--u) var(--u) 0;
+			background: var(--tint);
+		}
+		.row {
+			--c: var(--ink);
+			--cf: var(--paper);
+			display: flex;
+			align-items: center;
+			gap: 1ch;
+			padding: 0 calc(3 * var(--u));
+			min-height: var(--lh);
+		}
+		.row b {
+			font-weight: 400;
+			min-width: 0;
+			white-space: nowrap;
+			overflow: hidden;
+		}
+		.lost {
+			margin: auto;
+			width: min(100%, calc(240 * var(--u)));
+		}
+		.lost a.row:hover {
+			background: var(--c);
+			color: var(--cf);
+		}
+		</style>
+	</head>
+	<body>
+		<main class="sheet">
+			<div class="top"><span>quilling.dev</span></div>
+			<section class="bx rule win lost" aria-label="not found">
+				<header><span class="tab">404</span></header>
+				<div class="row"><b>nothing lives here.</b></div>
+				<a class="row" href="/" style="--c:#cb89a7;--cf:#1c1c1a"
+					><b>← back to quilling.dev</b></a
+				>
+			</section>
+		</main>
+	</body>
+</html>

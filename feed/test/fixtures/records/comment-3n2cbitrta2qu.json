@@ -1,0 +1,17 @@
+{
+  "cid": "bafyreigwgant3iuhbzkeoajrqulxt5shhmyt6kyqrmll4nso4rxbwi6ney",
+  "uri": "at://did:plc:jj6ajj6duxnlthwtnob4qyuv/org.tangled.feed.comment/3n2cbitrta2qu",
+  "value": {
+    "$type": "org.tangled.feed.comment",
+    "body": {
+      "$type": "org.tangled.markup.markdown",
+      "text": "range stuff: sure! we can pass through range. actually after the [next tower-http release](https://github.com/tower-rs/tower-http/pull/754) we can probably do if-range. if we also implement range for blobs that may be useful. for now we can just ignore range when we see if-range headers\n\ncontent-length stuff: nuked. no more `0` content length\n\natproto-proxy stuff: yeah actually, maybe caches should know that different upstream proxies provided the response. we can also forward any `Vary` header upstream appview gave us.."
+    },
+    "createdAt": "2026-11-14T19:51:07Z",
+    "subject": {
+      "cid": "bafyreibfq3hsjxcpyj5mo743aymu5awlyja4kfqojyge2x7gcdu7i33j4m",
+      "uri": "at://did:plc:jj6ajj6duxnlthwtnob4qyuv/org.tangled.track.ticket/646"
+    },
+    "x-tngl-editor": "did:plc:jrtgsidnmxaen4offglr5lsh"
+  }
+}

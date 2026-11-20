@@ -1,0 +1,28 @@
+{
+	"$schema": "https://biomejs.dev/schemas/2.6.5/schema.json",
+	"assist": {
+		"enabled": false
+	},
+	"linter": {
+		"rules": {
+			"preset": "recommended"
+		}
+	},
+	"files": {
+		"includes": [
+			"static/**",
+			"!static/blog",
+			"!static/svg",
+			"!static/*.css",
+			"!static/schema.json",
+			"feed/**/*.ts",
+			"!feed/worker-configuration.d.ts",
+			"!feed/.wrangler"
+		]
+	},
+	"html": {
+		"formatter": {
+			"enabled": true
+		}
+	}
+}

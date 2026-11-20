@@ -1,0 +1,19 @@
+name = "quilling-feed"
+main = "src/index.ts"
+compatibility_date = "2026-10-30"
+workers_dev = false
+preview_urls = false
+
+[triggers]
+crons = ["*/10 * * * *"]
+
+[[r2_buckets]]
+binding = "FEED"
+bucket_name = "quilling-feed"
+
+[[r2_buckets]]
+binding = "STATE"
+bucket_name = "quilling-feed-state"
+
+[observability]
+enabled = true

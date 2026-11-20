@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://tangled.org/quilling.dev/nixos-config</id>
+    <title>activity feed for @quilling.dev/nixos-config</title>
+    <updated>2026-11-16T04:38:32.000Z</updated>
+    <link rel="alternate" href="https://tangled.org/quilling.dev/nixos-config"/>
+    <entry>
+        <title type="html"><![CDATA[[Commit 7dea9ea] foundry autostart worlds]]></title>
+        <id>https://tangled.org/quilling.dev/nixos-config/commit/7dea9ea092e6b5a677093493d8e43e031d249e33</id>
+        <link href="https://tangled.org/quilling.dev/nixos-config/commit/7dea9ea092e6b5a677093493d8e43e031d249e33"/>
+        <updated>2026-11-16T04:38:32.000Z</updated>
+        <content type="html"><![CDATA[foundry autostart worlds
+]]></content>
+        <author>
+            <name>Timothy Quilling</name>
+            <email>teqed@shatteredsky.net</email>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Commit d8bbf84] jupiter foundry access for noctuae]]></title>
+        <id>https://tangled.org/quilling.dev/nixos-config/commit/d8bbf84d77e6f07781e1494be12ce4439226db0c</id>
+        <link href="https://tangled.org/quilling.dev/nixos-config/commit/d8bbf84d77e6f07781e1494be12ce4439226db0c"/>
+        <updated>2026-11-16T03:46:41.000Z</updated>
+        <content type="html"><![CDATA[jupiter foundry access for noctuae
+]]></content>
+        <author>
+            <name>Timothy Quilling</name>
+            <email>teqed@shatteredsky.net</email>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Commit 944af0c] flake.lock: Update]]></title>
+        <id>https://tangled.org/quilling.dev/nixos-config/commit/944af0ceb2ba81dc164cd29293d4b11ed44650c3</id>
+        <link href="https://tangled.org/quilling.dev/nixos-config/commit/944af0ceb2ba81dc164cd29293d4b11ed44650c3"/>
+        <updated>2026-11-15T08:15:47.000Z</updated>
+        <content type="html"><![CDATA[flake.lock: Update
+
+Flake lock file updates:
+
+• Updated input 'albedo':
+    'git+https://tangled.org/okami.mom/albedo?ref=refs/heads/main&rev=5016e9802369aa430c182a3cdcae1cb61062aef2' (2026-11-15)
+  → 'git+https://tangled.org/okami.mom/albedo?ref=refs/heads/main&rev=ca5a55213ed0687c6698e1250880445b8f690965' (2026-11-15)
+• Updated input 'llm-agents':
+    'github:numtide/llm-agents.nix/842c5f42b0003da8a3b5fba4ecd0762bb73c7911?narHash=sha256-Bq6syU%2BQCzUpHOlzWleAM5%2BKjqYA7Iryl7FUs3fHclY%3D' (2026-11-15)
+  → 'github:numtide/llm-agents.nix/aeb1afe1529c5dc7dcdc54d644a8aed212d99dd0?narHash=sha256-7extb%2Bld6xPCzcVuhVdvcvGPLu/qtDRrhFJmH68jXfM%3D' (2026-11-15)
+• Updated input 'nixpkgs':
+    'github:NixOS/nixpkgs/d4f25a3e562008648d45bcf2d70bcc7422cad84e?narHash=sha256-x9sADJvoVG0L6RejZB%2B/BB4YiGZFBZrfTlhF4uBq1tQ%3D' (2026-11-11)
+  → 'github:NixOS/nixpkgs/d5cc6833999746cffdfe0598f7bc801a57b887a9?narHash=sha256-Wpz/7x/YWnDIBu7yj6ixe8j6fIMsidd9Y%2Bo1PqPF3iM%3D' (2026-11-13)
+• Updated input 'nixpkgs-master':
+    'github:NixOS/nixpkgs/e6dc6579efe73ab4db1c236825804b2ddd1b2c97?narHash=sha256-HHXM4NzgWHGh9QrwI8/LLCX/CnlGTI22XKWBj10L6sM%3D' (2026-11-15)
+  → 'github:NixOS/nixpkgs/ae797d5b234de3e028fe48b894a0c2273ed17bde?narHash=sha256-ItjPLAaQ7BdFjzraC37MlBRkZvVsH6ZmLuVsQS66p2U%3D' (2026-11-15)
+]]></content>
+        <author>
+            <name>Timothy Quilling</name>
+            <email>teqed@shatteredsky.net</email>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Commit 7f7c99d] nix flake update]]></title>
+        <id>https://tangled.org/quilling.dev/nixos-config/commit/7f7c99d004e70607ec6ceee8f3d37f8b714db3eb</id>
+        <link href="https://tangled.org/quilling.dev/nixos-config/commit/7f7c99d004e70607ec6ceee8f3d37f8b714db3eb"/>
+        <updated>2026-11-15T05:34:02.000Z</updated>
+        <content type="html"><![CDATA[nix flake update
+]]></content>
+        <author>
+            <name>Timothy Quilling</name>
+            <email>teqed@shatteredsky.net</email>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Commit d0d8ed2] nix flake update albedo]]></title>
+        <id>https://tangled.org/quilling.dev/nixos-config/commit/d0d8ed26304a767c03918112edbac44abd8caa4c</id>
+        <link href="https://tangled.org/quilling.dev/nixos-config/commit/d0d8ed26304a767c03918112edbac44abd8caa4c"/>
+        <updated>2026-11-15T05:32:57.000Z</updated>
+        <content type="html"><![CDATA[nix flake update albedo
+]]></content>
+        <author>
+            <name>Timothy Quilling</name>
+            <email>teqed@shatteredsky.net</email>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Commit db32b2b] foundry relay track activity and timeout faster]]></title>
+        <id>https://tangled.org/quilling.dev/nixos-config/commit/db32b2b4eca925f34e49d11cd440ebf1badcebad</id>
+        <link href="https://tangled.org/quilling.dev/nixos-config/commit/db32b2b4eca925f34e49d11cd440ebf1badcebad"/>
+        <updated>2026-11-15T05:31:24.000Z</updated>
+        <content type="html"><![CDATA[foundry relay track activity and timeout faster
+]]></content>
+        <author>
+            <name>Timothy Quilling</name>
+            <email>teqed@shatteredsky.net</email>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Commit 3ccd139] foundry relay lower fps]]></title>
+        <id>https://tangled.org/quilling.dev/nixos-config/commit/3ccd139710fbebf16c800443eb118927949b0efe</id>
+        <link href="https://tangled.org/quilling.dev/nixos-config/commit/3ccd139710fbebf16c800443eb118927949b0efe"/>
+        <updated>2026-11-15T05:20:57.000Z</updated>
+        <content type="html"><![CDATA[foundry relay lower fps
+]]></content>
+        <author>
+            <name>Timothy Quilling</name>
+            <email>teqed@shatteredsky.net</email>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Commit 2ff9592] foundry relay time out sessions eventually]]></title>
+        <id>https://tangled.org/quilling.dev/nixos-config/commit/2ff9592b0bdc9b5114a9f7c4c574af0d3b8c2239</id>
+        <link href="https://tangled.org/quilling.dev/nixos-config/commit/2ff9592b0bdc9b5114a9f7c4c574af0d3b8c2239"/>
+        <updated>2026-11-15T05:09:51.000Z</updated>
+        <content type="html"><![CDATA[foundry relay time out sessions eventually
+]]></content>
+        <author>
+            <name>Timothy Quilling</name>
+            <email>teqed@shatteredsky.net</email>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Commit 54e558a] harmonia for binary cache]]></title>
+        <id>https://tangled.org/quilling.dev/nixos-config/commit/54e558af1321e346007e1a2ca26e1af6247a5eb4</id>
+        <link href="https://tangled.org/quilling.dev/nixos-config/commit/54e558af1321e346007e1a2ca26e1af6247a5eb4"/>
+        <updated>2026-11-15T05:02:53.000Z</updated>
+        <content type="html"><![CDATA[harmonia for binary cache
+]]></content>
+        <author>
+            <name>Timothy Quilling</name>
+            <email>teqed@shatteredsky.net</email>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Commit b1f33e2] foundry relay gpu rendering]]></title>
+        <id>https://tangled.org/quilling.dev/nixos-config/commit/b1f33e2f5bdf00fe10652d07931ea3661adf06bc</id>
+        <link href="https://tangled.org/quilling.dev/nixos-config/commit/b1f33e2f5bdf00fe10652d07931ea3661adf06bc"/>
+        <updated>2026-11-15T04:57:16.000Z</updated>
+        <content type="html"><![CDATA[foundry relay gpu rendering
+]]></content>
+        <author>
+            <name>Timothy Quilling</name>
+            <email>teqed@shatteredsky.net</email>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Commit 72b4203] foundry relay additional session]]></title>
+        <id>https://tangled.org/quilling.dev/nixos-config/commit/72b4203256ed69ee1215b85cd504e0a601f226ac</id>
+        <link href="https://tangled.org/quilling.dev/nixos-config/commit/72b4203256ed69ee1215b85cd504e0a601f226ac"/>
+        <updated>2026-11-15T04:53:29.000Z</updated>
+        <content type="html"><![CDATA[foundry relay additional session
+]]></content>
+        <author>
+            <

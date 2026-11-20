@@ -1,0 +1,17 @@
+{
+  "cid": "bafyreibnhdwogw6wjdelw67ypenpfpx3lfsfzejswvbcjkgqlbcthrcdv4",
+  "uri": "at://did:plc:jj6ajj6duxnlthwtnob4qyuv/org.tangled.feed.comment/3n2chprpezdqu",
+  "value": {
+    "$type": "org.tangled.feed.comment",
+    "body": {
+      "$type": "org.tangled.markup.markdown",
+      "text": "yes, we should do away with the grace period!\n\n[`\"Concurrent refresh with the same token should be treated as reuse\"`](<https://tangled.org/tranquil.farm/tranquil-pds/pulls/689/0#file-crates/tranquil-pds/tests/it/oauth_security.rs:R806>) -- could we maybe be permissive of concurrent refreshes? this seems like [typical behavior](https://github.com/bluesky-social/atproto/blob/f136380964a8ea52ef031a9732d3d1f1f1ab0c4a/packages/oauth/oauth-client/src/session-getter.ts#L124-L171) and we should be within spec to decline to re-rotate on concurrent reuse without revoking since these are sender-bound by dpop? that should be a much narrower scenario than the original grace window\n\nthe ref pds *does* appear to allow similar behavior if Im understanding [this comment](https://github.com/bluesky-social/atproto/blob/87e6a95c39f199e53b6a68b7d1fa23fbe8459753/packages/oauth/oauth-provider/src/token/token-manager.ts#L348-L373) correctly though that may change.."
+    },
+    "createdAt": "2026-11-14T21:42:22Z",
+    "subject": {
+      "cid": "bafyreibxkhvqvw7he56bwmezvr6nxht2hv3dbhskw2surdchrzrb2kvpsy",
+      "uri": "at://did:plc:jj6ajj6duxnlthwtnob4qyuv/org.tangled.track.ticket/689"
+    },
+    "x-tngl-editor": "did:plc:jrtgsidnmxaen4offglr5lsh"
+  }
+}

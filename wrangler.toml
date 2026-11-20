@@ -1,5 +1,13 @@
 name = "about-me"
 compatibility_date = "2026-04-18"
+workers_dev = false
+preview_urls = false
+routes = [
+	{ pattern = "quilling.dev", custom_domain = true },
+	{ pattern = "timothy.quilling.dev", custom_domain = true },
+	{ pattern = "timothy.e.quilling.dev", custom_domain = true },
+]
 
 [assets]
 directory = "./static"
+not_found_handling = "404-page"

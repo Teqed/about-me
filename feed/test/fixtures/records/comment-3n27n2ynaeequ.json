@@ -1,0 +1,17 @@
+{
+  "cid": "bafyreiejuxxqdvfd2wmhswdpnkdtworgwn7g53rgefvnixvyltsqs65nce",
+  "uri": "at://did:plc:jj6ajj6duxnlthwtnob4qyuv/org.tangled.feed.comment/3n27n2ynaeequ",
+  "value": {
+    "$type": "org.tangled.feed.comment",
+    "body": {
+      "$type": "org.tangled.markup.markdown",
+      "text": "new round!\n\nby the power of axum middleware we have a policy which handles the cache generically for routes in a pretty sane way\n\nfrontend gets split out from lib.rs like the last round\n\nin the second commit, several places get `no-store` cache headers applied where we should probably be using them\n\nthird commit uses the vite manifest to determine what hashed assets can be statically cached \n\nfourth commit is some wizardry -- from what I can tell the ref appview has cache headers for conditional requests (e.g. allowing 304 response) but the ref pds appears to strip them. we dont have to do that!!\n\nwe want to be a bit careful about proxying cache headers from appviews in case they are using them incorrectly, but it seems to me that regular social-app users with tranquil-pds on bsky appview may be able to trivially get a 304 for e.g. a getProfile request?\n\nfifth commit expands a bit into xrpc cache headers. using cids we can generate an etag for these requests!"
+    },
+    "createdAt": "2026-11-13T18:40:08Z",
+    "subject": {
+      "cid": "bafyreibfq3hsjxcpyj5mo743aymu5awlyja4kfqojyge2x7gcdu7i33j4m",
+      "uri": "at://did:plc:jj6ajj6duxnlthwtnob4qyuv/org.tangled.track.ticket/646"
+    },
+    "x-tngl-editor": "did:plc:jrtgsidnmxaen4offglr5lsh"
+  }
+}

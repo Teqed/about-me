@@ -1,0 +1,20 @@
+{
+  "cid": "bafyreibqxpl242n3s5czxwmbha2v2qz44jntibx4xgopirbf7dzlycblva",
+  "uri": "at://did:plc:jj6ajj6duxnlthwtnob4qyuv/org.tangled.review.patch/bafyreibqxpl242n3s5czxwmbha2v2qz44jntibx4xgopirbf7dzlycblva",
+  "value": {
+    "$type": "org.tangled.review.patch",
+    "base": {
+      "oid": "ce17e8a4948aa216c6c1056122966a11b8a693c8"
+    },
+    "createdAt": "2026-11-14T19:50:10Z",
+    "head": {
+      "oid": "e240d47394c1d449a04c42beda6cc2f627e33ffd"
+    },
+    "source": {
+      "branch": "fix/cache-header-etags",
+      "repo": "did:plc:er4sgl7uj2qyxy563xvfuyrg"
+    },
+    "ticket": "646",
+    "x-tngl-editor": "did:plc:jrtgsidnmxaen4offglr5lsh"
+  }
+}

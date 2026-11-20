@@ -1,0 +1,14 @@
+{
+  "cid": "bafyreicpn6yri547a37bkkvgoiixsv25hulddpgqvkobbflzaqnzdtywoe",
+  "uri": "at://did:plc:jj6ajj6duxnlthwtnob4qyuv/org.tangled.feed.reaction/3n2jgar76we6n",
+  "value": {
+    "$type": "org.tangled.feed.reaction",
+    "createdAt": "2026-11-17T16:04:43Z",
+    "reaction": "❤️",
+    "subject": {
+      "cid": "bafyreieq2or6qi6uitquhkszas4dw57gtzamr7dzalmlljxxlkpntieo4q",
+      "uri": "at://did:plc:jj6ajj6duxnlthwtnob4qyuv/org.tangled.track.ticket/690"
+    },
+    "x-tngl-editor": "did:plc:jrtgsidnmxaen4offglr5lsh"
+  }
+}

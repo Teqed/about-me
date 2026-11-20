@@ -1,164 +1,1575 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>teq</title>
+		<meta
+			name="description"
+			content="teq, devops engineer: how to reach them, what they're posting on Bluesky, and what they're contributing on Tangled. Also known as Timothy Quilling."
+		>
+		<meta name="color-scheme" content="light">
+		<meta name="darkreader-lock">
+		<meta
+			name="theme-color"
+			content="#f2f0ea"
+			media="(prefers-color-scheme: light)"
+		>
+		<meta
+			name="theme-color"
+			content="#22211e"
+			media="(prefers-color-scheme: dark)"
+		>
+		<link rel="canonical" href="https://quilling.dev/">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://quilling.dev/">
+		<meta property="og:title" content="teq">
+		<meta property="og:description" content="teq, devops engineer.">
+		<meta property="og:image" content="https://quilling.dev/og.png">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<meta
+			property="og:image:alt"
+			content="quilling.dev: the word teq drawn over a rainbow banner, above the readme and badges panels, on pale paper"
+		>
+		<meta name="twitter:card" content="summary_large_image">
+		<link
+			rel="alternate"
+			type="application/rss+xml"
+			title="teq on Bluesky"
+			href="https://bsky.app/profile/did:plc:jrtgsidnmxaen4offglr5lsh/rss"
+		>
+		<link rel="me" href="https://bsky.app/profile/quilling.dev">
+		<link rel="me" href="https://github.com/Teqed/">
+		<link rel="icon" href="favicon.ico" sizes="any">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link
+			rel="preload"
+			href="fonts/DepartureMono-Regular.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin
+		>
+		<link
+			rel="preload"
+			href="https://feed.quilling.dev/feeds.json"
+			as="fetch"
+			crossorigin
+		>
+		<script>
+		if (!/[?&]js=no\b/.test(location.search)) {
+			const h = document.documentElement;
+			let s;
+			h.classList.add("js");
+			h.style.setProperty("--z", Math.min(1, innerWidth / 640));
+			try {
+				s = localStorage.night;
+			} catch {}
+			if (
+				location.hash === "#night" ||
+				(location.hash !== "#day" &&
+					(s ? s === "1" : matchMedia("(prefers-color-scheme: dark)").matches))
+			)
+				h.classList.add("night");
+		}
+		</script>
+		<style>
+		@font-face {
+			font-family: "Departure Fallback";
+			src:
+				local("Menlo Regular"), local("Menlo-Regular"),
+				local("DejaVu Sans Mono"), local("DejaVuSansMono");
+			size-adjust: 106.1%;
+			ascent-override: 98%;
+			descent-override: 27%;
+			line-gap-override: 0%;
+		}
+		@font-face {
+			font-family: "Departure Fallback Win";
+			src: local("Consolas");
+			size-adjust: 116.2%;
+			ascent-override: 98%;
+			descent-override: 27%;
+			line-gap-override: 0%;
+		}
+		@font-face {
+			font-family: "Departure Fallback Wide";
+			src:
+				local("Liberation Mono"), local("LiberationMono"), local("Courier New"),
+				local("CourierNewPSMT"), local("Noto Sans Mono");
+			size-adjust: 106.5%;
+			ascent-override: 98%;
+			descent-override: 27%;
+			line-gap-override: 0%;
+		}
+		@font-face {
+			font-family: "Departure Mono";
+			src: url("fonts/DepartureMono-Regular.woff2") format("woff2");
+			font-display: block;
+		}
+		:root {
+			--ch: calc(2em / 3);
+			--still: url(img/nojs/plate.webp);
+			--still-tall: url(img/nojs/plate-tall.webp);
+			--av: none;
+			--moon: flex;
+			--sun: none;
+			--day: #f2f0ea;
+			--paper: var(--day);
+			--ink: #1c1c1a;
+			--spot: #cb89a7;
+			--u: 2px;
+			--f: calc(8.25 * var(--u));
+			--lh: calc(16 * var(--u));
+			color-scheme: light;
+			--o: var(--ink);
+		}
+		html.night,
+		html:not(.js):has(#night:target) {
+			--paper: #22211e;
+			--ink: #e8e6de;
+			color-scheme: dark;
+			--still: url(img/nojs/plate-night.webp);
+			--still-tall: url(img/nojs/plate-tall-night.webp);
+			--av: url(#night-av);
+			--moon: none;
+			--sun: flex;
+		}
+		@media (prefers-color-scheme: dark) {
+			html:not(.js):not(:has(#day:target)) {
+				--paper: #22211e;
+				--ink: #e8e6de;
+				color-scheme: dark;
+				--still: url(img/nojs/plate-night.webp);
+				--still-tall: url(img/nojs/plate-tall-night.webp);
+				--av: url(#night-av);
+				--moon: none;
+				--sun: flex;
+			}
+		}
+		* {
+			box-sizing: border-box;
+		}
+		html {
+			background: var(--paper);
+			scrollbar-gutter: stable both-edges;
+		}
+		body {
+			margin: 0;
+			container-type: inline-size;
+			background: var(--paper);
+			color: var(--ink);
+			font:
+				var(--f) / var(--lh) "Departure Mono",
+				"Departure Fallback",
+				"Departure Fallback Win",
+				"Departure Fallback Wide",
+				monospace;
+		}
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
+		.sr {
+			position: absolute;
+			width: 1px;
+			height: 1px;
+			overflow: hidden;
+			clip-path: inset(50%);
+		}
+		.bx {
+			background-color: var(--paper);
+			box-shadow:
+				0 calc(-1 * var(--u)) 0 0 var(--o),
+				0 var(--u) 0 0 var(--o),
+				calc(-1 * var(--u)) 0 0 0 var(--o),
+				var(--u) 0 0 0 var(--o);
+		}
+		.frame:focus-visible,
+		.key:focus-visible,
+		a:focus-visible {
+			outline: var(--u) dotted var(--ink);
+			outline-offset: calc(3 * var(--u));
+		}
+		.rule {
+			background:
+				linear-gradient(var(--paper) calc(100% - var(--u)), var(--tint) 0) 0 0 /
+				100% var(--lh);
+		}
 
-<head>
-    <meta charset="utf-8">
-    <meta name="color-scheme" content="dark light">
-    <meta name="theme-color" content="#181A1C" media="(prefers-color-scheme: dark)">
-    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-    <title>Teq's Website</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Timothy Quilling, also known as Teq, is an American software developer. They are known for their work with designing infrastructure for enterprise and public sector environments.">
-    <link rel="stylesheet" type="text/css" href="/normalize.css">
-    <link rel="stylesheet" type="text/css" href="/skeleton.css">
-    <link rel="stylesheet" type="text/css" href="/main.css">
-    <link rel="icon" type="image/ico" href="/favicon.ico">
-    <link rel="me" href="https://mastodon.shatteredsky.net/@teq">
-    <link rel="preload" as="image" href="/png/me.webp" type="image/webp">
-    <link rel="canonical" href="https://quilling.dev">
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org/",
-            "@graph":[
-                {
-                    "@type":"BreadcrumbList",
-                    "@id":"https://quilling.dev#breadcrumb",
-                    "itemListElement": [{
-                      "@type": "ListItem",
-                      "position": 1,
-                      "name": "About",
-                      "item": "https://quilling.dev/"
-                    },{
-                      "@type": "ListItem",
-                      "position": 2,
-                      "name": "Blog",
-                      "item": "https://quilling.dev/blog/"
-                    }]
-                },
-                {
-                    "@type":"WebSite",
-                    "@id":"https://quilling.dev/#website",
-                    "url":"https://quilling.dev/",
-                    "name":"Timothy Quilling",
-                    "description":"Homepage for Timothy Quilling",
-                    "publisher":{
-                        "@id":"https://quilling.dev/#person"
-                    },
-                    "potentialAction":[{
-                        "@type":"SearchAction",
-                        "target":{
-                            "@type":"EntryPoint",
-                            "urlTemplate":"https://quilling.dev/?s={search_term_string}"
-                        },
-                        "query-input":"required name=search_term_string"
-                    }],
-                    "inLanguage":"en-US"
-                },
-                {
-                    "@type": "ProfilePage",
-                    "@id":"https://quilling.dev/",
-                    "url":"https://quilling.dev",
-                    "name":"About Timothy Quilling",
-                    "isPartOf":{
-                        "@id":"https://quilling.dev/#website"
-                    },
-                    "about":{
-                        "@id":"https://quilling.dev/#person"
-                    },
-                    "datePublished":"2024-03-06T05:30:13+0000",
-                    "dateModified":"2024-03-06T05:30:13+0000",
-                    "description":"Timothy Quilling is an American software engineer.",
-                    "breadcrumb":{
-                        "@id":"https://quilling.dev#breadcrumb"
-                    },
-                    "inLanguage":"en-US",
-                    "potentialAction":[{
-                        "@type":"ReadAction",
-                        "target":["https://quilling.dev"]
-                    }],
-                    "mainEntity": {
-                        "@id":"https://quilling.dev/#person"
-                    }
-                },
-                {
-                    "@type": "Person",
-                    "@id":"https://quilling.dev#person",
-                    "name": "Timothy Quilling",
-                    "alternateName": "teq",
-                    "url":"https://quilling.dev/",
-                    "description": "American software developer",
-                    "image": "https://quilling.dev/png/me.webp",
-                    "sameAs": [
-                    "https://bsky.app/profile/quilling.dev",
-                    "https://bsky.app/profile/did:plc:jrtgsidnmxaen4offglr5lsh",
-                    "https://mastodon.shatteredsky.net/@teq",
-                    "https://github.com/Teqed/",
-                    "https://www.linkedin.com/in/teqed/",
-                    "https://bsky.app/profile/shatteredsky.net",
-                    "https://www.threads.net/@teqed",
-                    "https://twitter.com/Teqnician",
-                    "https://www.youtube.com/@teqed",
-                    "https://instagram.com/teqed/"
-                    ],
-                    "worksFor":{
-                        "@type":"Organization",
-                        "name":"Stelo",
-                        "url":"https://www.stelodata.com/"
-                    },
-                    "jobTitle":"DevOps Engineer",
-                    "alumniOf":{
-                        "@type":"Organization",
-                        "name":"Seminole State College of Florida",
-                        "@id":"https://www.wikidata.org/wiki/Q7449539"
-                    },
-                    "knowsLanguage":"english"
-                }
-            ]   
-        }
-    </script>
-</head>
+		.sheet {
+			zoom: var(--z, 1);
+			max-width: calc(608 * var(--u));
+			margin: 0 auto;
+			padding: calc(12 * var(--u)) var(--side) calc(32 * var(--u));
+			display: flex;
+			flex-direction: column;
+			container-type: inline-size;
+			--side: clamp(calc(4 * var(--u)), 50cqw - 399px, calc(12 * var(--u)));
+		}
+		@container (max-width: 813px) {
+			.sheet {
+				--side: calc(12 * var(--u));
+			}
+		}
+		canvas {
+			display: block;
+			image-rendering: pixelated;
+		}
+		.log {
+			display: grid;
+			grid-template-columns: minmax(calc(113 * var(--u)), 63fr) minmax(
+					calc(282 * var(--u)),
+					80fr
+				);
+			row-gap: calc(12 * var(--u));
+			column-gap: clamp(
+				calc(4 * var(--u)),
+				100cqw -
+				790px,
+				calc(12 * var(--u))
+			);
+		}
+		.log > .feed {
+			grid-column: 1 / -1;
+		}
+		.badges {
+			display: grid;
+			grid-template-columns: repeat(3, auto);
+			grid-auto-rows: calc(2.5 * var(--lh));
+			justify-content: space-evenly;
+			padding: 0 calc(3 * var(--u));
+			container-type: inline-size;
+		}
+		.ubar {
+			display: flex;
+			align-items: center;
+			padding: 0 var(--u);
+			background: var(--paper);
+			cursor: pointer;
+		}
+		.ubar:nth-child(n + 4) {
+			background:
+				linear-gradient(var(--paper), var(--paper)) top / 100%
+				calc(100% - var(--u)) no-repeat;
+		}
+		.ubar canvas {
+			display: block;
+			max-width: 100%;
+			height: auto;
+			image-rendering: pixelated;
+		}
+		@media (hover: hover) {
+			.ubar:hover canvas {
+				filter: brightness(1.12) saturate(1.1);
+			}
+		}
+		.ubar:focus-visible {
+			outline: var(--u) dotted var(--ink);
+			outline-offset: calc(-3 * var(--u));
+		}
+		[data-ic="sky"] {
+			transition: transform 0.16s steps(2);
+		}
+		[data-ic="sky"].lift {
+			transform: translateY(calc(-1 * var(--u)));
+		}
 
-<body>
-    <header class="container">
-        <div class="row">
-            <div class="u-pull-left nine columns">
-                <h1>Teq's Website</h1>
-                <nav>
-                    <a class="nav button offset-by-quarter column" href="/">About</a>
-                    <a class="nav button column" href="/blog">Blog</a>
-                </nav>
-            </div>
-            <picture>
-                <source srcset="/png/me.webp" type="image/webp">
-                <img class="u-pull-right avatar" src="/png/me.png" title="Teq" alt="person in black/white dither with hand over their mouth" width="120" height="120">
-            </picture>
-        </div>
-        <hr>
-    </header>
-    <div class="container" style="min-height: 50dvh;">
-        <section>
-            <h2>About</h2>
-            <p>Hello, my name is Teq [they/them]. I am an American software developer and BSc IT. I am also known by many as Timothy Quilling.</p>
-            <p>My professional work primarily involves designing reliable infrastructure for the public sector and enterprises. If you're interested in scheduling contract work with me, you can find my <a href="/pdf/quilling-resume.pdf">contact information here.</a></p>
-            <p>In my spare time I create free software to help my friends, which I primarily host at <a href="https://shatteredsky.net">shatteredsky.net</a>. My preferred language for new projects is Rust and my preferred environment is NixOS.</p>
-            <p>Originally from Orlando, on most of my days I can be found enjoying coffee, creating art or walking to the local deli. <a href="/blog/more-about-me">Learn more about me here.</a></p>
-        </section>
-        <section>
-            <h2>Contact</h2>
-            <p>
-                Reach out to me by email <a href="mailto:teqed@shatteredsky.net">teqed@shatteredsky.net</a> (<a href="https://openpgpkey.shatteredsky.net/pgp.txt">PGP</a>) or <a href="https://bsky.app/profile/did:plc:jrtgsidnmxaen4offglr5lsh">Bluesky</a>.
-            </p>
-        </section>
-    </div>
-    <footer class="container">
-        <hr>
-        <div class="row" style="display: flex; justify-content: center; align-items: center;">
-            <a href="mailto:teqed@shatteredsky.net"><img class="icon" src="/svg/mail.svg" title="Mail" alt="My email is teqed@shatteredsky.net" width="50" height="50"></a>
-            <a href="https://bsky.app/profile/did:plc:jrtgsidnmxaen4offglr5lsh"><img class="icon" src="/svg/bluesky.svg" title="Bluesky" alt="My Bluesky profile" width="50" height="50"></a>
-            <a href="https://github.com/Teqed/"><img class="icon" src="/svg/github.svg" title="GitHub" alt="My GitHub profile" width="50" height="50"></a>
-            <a href="https://www.linkedin.com/in/teqed/"><img class="icon" src="/svg/linkedin.svg" title="LinkedIn" alt="My LinkedIn profile" width="50" height="50"></a>
-        </div>
-    </footer>
-</body>
+		.win {
+			position: relative;
+			padding-top: var(--lh);
+			min-height: calc(6 * var(--lh));
+			--line: color-mix(in oklab, var(--spot) 48%, var(--ink));
+			--tint: color-mix(in oklab, var(--spot) 34%, var(--paper));
+			--o: var(--line);
+		}
+		.win > header {
+			position: absolute;
+			inset: 0 0 auto;
+			height: var(--lh);
+			display: flex;
+			align-items: flex-start;
+			gap: var(--ch);
+		}
+		.win > header > svg {
+			align-self: center;
+			margin: 0 calc(4 * var(--u)) var(--u) 0;
+		}
+		.win > header > svg:first-of-type {
+			margin-left: auto;
+		}
 
+		.flit {
+			display: flex;
+			align-self: center;
+			margin: 0 calc(3 * var(--u)) var(--u) auto;
+			border: 0;
+			padding: var(--u);
+			background: none;
+			cursor: pointer;
+			--glow: color-mix(in oklab, var(--spot) 45%, var(--paper));
+			--lit: brightness(1.2) saturate(1.2)
+				drop-shadow(0 0 calc(3 * var(--u)) var(--glow));
+		}
+		.flit:active {
+			filter: var(--lit);
+		}
+		.flit:focus-visible {
+			outline: var(--u) dotted var(--ink);
+		}
+		.hd {
+			display: contents;
+			font: inherit;
+		}
+		.win > header a {
+			line-height: calc(var(--lh) - var(--u));
+			color: var(--line);
+		}
+		@media (hover: hover) {
+			.win > header a:hover {
+				text-decoration: underline;
+			}
+			.flit:hover {
+				filter: var(--lit);
+			}
+		}
+		.tab,
+		.tab::before {
+			clip-path: polygon(
+				0 0,
+				100% 0,
+				100% calc(100% - 2 * var(--u)),
+				calc(100% - var(--u)) calc(100% - 2 * var(--u)),
+				calc(100% - var(--u)) calc(100% - var(--u)),
+				calc(100% - 2 * var(--u)) calc(100% - var(--u)),
+				calc(100% - 2 * var(--u)) 100%,
+				0 100%
+			);
+		}
+		.tab {
+			position: relative;
+			flex: none;
+			isolation: isolate;
+			background: var(--o);
+			color: var(--line);
+			padding: 0 calc(5 * var(--u)) var(--u) calc(3 * var(--u));
+			line-height: calc(var(--lh) - var(--u));
+			width: calc(var(--n) * var(--ch) + 8 * var(--u));
+			white-space: nowrap;
+		}
+		.tab::before {
+			content: "";
+			position: absolute;
+			z-index: -1;
+			inset: 0 var(--u) var(--u) 0;
+			background: var(--tint);
+		}
+		.row {
+			--c: var(--ink);
+			--cf: var(--paper);
+			display: grid;
+			grid-template-columns: auto calc(8 * var(--ch)) minmax(0, 1fr);
+			gap: 0 var(--ch);
+			align-items: center;
+			padding: 0 calc(3 * var(--u));
+			min-height: var(--lh);
+		}
+		.row b {
+			font-weight: 400;
+			overflow-wrap: anywhere;
+		}
+		.idx .row {
+			display: flex;
+			align-items: center;
+			gap: var(--ic-gap);
+			padding: 0 var(--row-r) 0 var(--row-l);
+			min-width: 0;
+		}
+		.idx .row svg {
+			flex: none;
+		}
+		.idx .row b {
+			min-width: 0;
+			white-space: nowrap;
+			overflow: hidden;
+		}
+		.row:active {
+			background: var(--c);
+			color: var(--cf);
+		}
+		.idx .row:active svg path,
+		.idx .row:hover svg path {
+			fill: var(--cf);
+		}
+		.row:active i {
+			box-shadow: 0 0 0 var(--u) var(--cf);
+		}
+		.feed .row {
+			--c: var(--spot);
+			grid-template-columns: calc(8 * var(--ch)) minmax(0, 1fr) calc(
+					6 *
+					var(--ch)
+				);
+		}
+		.feed .row b {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		.feed time {
+			text-align: right;
+		}
+		.idx {
+			container-type: inline-size;
+		}
+		.me {
+			display: grid;
+			grid-template-columns: auto minmax(0, 1fr);
+			--av-l: clamp(var(--u), 10cqw - 27.6px, calc(3 * var(--u)));
+			--av-r: clamp(var(--u), 25cqw - 72px, calc(6 * var(--u)));
+			--av-cut: calc(
+				clamp(calc(64 * var(--u)), 35cqw + 38.4px, calc(71 * var(--u))) -
+				71 *
+				var(--u)
+			);
+			--av-cut3: clamp(calc(-6 * var(--u)), 40cqw - 102.4px, 0px);
+			--av-trim: clamp(calc(-15 * var(--u)), 100cqw - 256px, 0px);
+			--av-w: calc(
+				clamp(calc(71 * var(--u)), 25cqw + 68px, calc(76 * var(--u))) +
+				var(--av-cut) +
+				var(--av-trim)
+			);
+			--row-l: clamp(var(--u), 10cqw - 27.6px, calc(3 * var(--u)));
+			--row-r: clamp(0px, 15cqw - 44.4px, calc(3 * var(--u)));
+			--ic-gap: clamp(calc(2 * var(--u)), 15cqw - 40.4px, calc(5 * var(--u)));
+		}
+		.av {
+			box-sizing: content-box;
+			padding: calc(2 * var(--u)) var(--av-r) var(--u) var(--av-l);
+			width: var(--av-w);
+			height: calc(5 * var(--lh) - 4 * var(--u));
+			overflow: hidden;
+			background: var(--paper);
+		}
+		@media (hover: hover) {
+			.row:hover {
+				background: var(--c);
+				color: var(--cf);
+			}
+			.row:hover i {
+				box-shadow: 0 0 0 var(--u) var(--cf);
+			}
+		}
+		.plate {
+			position: relative;
+			display: flex;
+			height: calc(9 * var(--lh));
+			margin: calc(6 * var(--u)) 0 calc(12 * var(--u));
+		}
+		.log {
+			flex: none;
+		}
+		.frame {
+			display: block;
+			position: relative;
+			border: 0;
+			padding: 0;
+			font: inherit;
+			color: inherit;
+			cursor: pointer;
+			-webkit-tap-highlight-color: transparent;
+			flex: 1;
+			width: 100%;
+		}
+		.art {
+			position: absolute;
+			inset: calc(4 * var(--u));
+			overflow: hidden;
+		}
+		.plate figcaption {
+			--n: 13;
+			position: absolute;
+			right: calc(4 * var(--u));
+			bottom: calc(4 * var(--u));
+			display: flex;
+			gap: calc(2 * var(--ch));
+			width: calc((var(--n) + 2) * var(--ch) + 8 * var(--u));
+			white-space: nowrap;
+			padding: 0 calc(4 * var(--u));
+			background: var(--paper);
+			pointer-events: none;
+			box-shadow:
+				0 calc(-1 * var(--u)) 0 0 var(--ink),
+				calc(-1 * var(--u)) 0 0 0 var(--ink);
+		}
+		.art {
+			background: var(--still-tall) left center / cover no-repeat;
+			image-rendering: pixelated;
+		}
+		.art.drawn {
+			background: none;
+		}
+		.ubar canvas {
+			width: 176px;
+			background: url(img/sprites.webp) no-repeat;
+			background-size: calc(1588 / 88 * 100%) calc(82 / 31 * 100%);
+		}
+		[data-bar="shatter"] canvas {
+			background-position: calc(186 / 1500 * 100%) calc(39 / 51 * 100%);
+		}
+		[data-bar="hat"] canvas {
+			background-position: calc(278 / 1500 * 100%) calc(39 / 51 * 100%);
+		}
+		[data-bar="tranquil"] canvas {
+			background-position: calc(370 / 1500 * 100%) calc(39 / 51 * 100%);
+		}
+		[data-bar="albedo"] canvas {
+			background-position: calc(462 / 1500 * 100%) calc(39 / 51 * 100%);
+		}
+		[data-bar="possums"] canvas {
+			background-position: calc(554 / 1500 * 100%) calc(39 / 51 * 100%);
+		}
+		[data-bar="nixos"] canvas {
+			background-position: calc(646 / 1500 * 100%) calc(39 / 51 * 100%);
+		}
+		.wm {
+			position: absolute;
+			left: calc(10 * var(--u));
+			top: 0;
+			margin: 0;
+			line-height: 0;
+			pointer-events: none;
+		}
+		.wm canvas + canvas {
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		.av img {
+			color: transparent;
+			display: block;
+			margin-left: calc(var(--av-cut) + var(--av-cut3));
+			width: calc(76 * var(--u));
+			height: calc(76 * var(--u));
+			image-rendering: pixelated;
+			filter: var(--av);
+		}
+		.top {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.keys {
+			display: flex;
+			gap: calc(6 * var(--u));
+			margin-right: var(--u);
+		}
+		.key {
+			display: flex;
+			border: 0;
+			padding: calc(2 * var(--u)) calc(3 * var(--u));
+			background: var(--paper);
+			color: inherit;
+			cursor: pointer;
+			box-shadow:
+				0 calc(-1 * var(--u)) 0 0 var(--ink),
+				0 var(--u) 0 0 var(--ink),
+				calc(-1 * var(--u)) 0 0 0 var(--ink),
+				var(--u) 0 0 0 var(--ink);
+		}
+		@media (hover: hover) {
+			.key:hover {
+				background: color-mix(in oklab, var(--spot) 34%, var(--paper));
+			}
+		}
+		.key:active {
+			transform: translateY(var(--u));
+			background: color-mix(in oklab, var(--spot) 34%, var(--paper));
+		}
+		.dark,
+		.unlit,
+		.lit {
+			display: none;
+		}
+		html.js .dark {
+			display: flex;
+		}
+		html:not(.js) .unlit {
+			display: var(--moon);
+		}
+		html:not(.js) .lit {
+			display: var(--sun);
+		}
+		.top .key svg {
+			width: calc(4 * var(--u));
+			height: calc(7 * var(--u));
+		}
+		.motion[aria-pressed="true"] .pause,
+		.motion[aria-pressed="false"] .play,
+		.dark[aria-pressed="true"] .moon,
+		.dark[aria-pressed="false"] .sun {
+			display: none;
+		}
+		.wm:not(.drawn) canvas {
+			display: none;
+		}
+		html.js .feed:not(.shown) .row {
+			pointer-events: none;
+		}
+		html.js .feed:not(.shown) .row > * {
+			visibility: hidden;
+		}
+		html:not(.js) #art canvas,
+		html:not(.js) #wm canvas {
+			display: none;
+		}
+		@container (max-width: 797px) {
+			.log {
+				grid-template-columns: minmax(0, 1fr);
+			}
+			.plate {
+				height: calc(6 * var(--lh));
+			}
+			.art {
+				background-image: var(--still);
+			}
+		}
+		.about {
+			width: min(calc(100cqw - 16 * var(--u)), calc(300 * var(--u)));
+			margin: auto;
+			border: 0;
+			padding: var(--lh) 0 0;
+			color: var(--ink);
+			overflow: visible;
+		}
+		.about::backdrop {
+			background:
+				repeating-conic-gradient(var(--paper) 0 25%, transparent 0 50%) 0 0 /
+				calc(2 * var(--u)) calc(2 * var(--u));
+		}
+		.note {
+			width: fit-content;
+			height: fit-content;
+			min-height: 0;
+		}
+		.about p {
+			margin: 0;
+			padding: 0 calc(3 * var(--u));
+			line-height: var(--lh);
+		}
+		.about .pub,
+		.about .fp {
+			overflow-wrap: anywhere;
+		}
+		#ssh {
+			min-height: 0;
+		}
+		.about .pub {
+			user-select: all;
+		}
+		.about .fp {
+			color: var(--line);
+		}
+		.acts {
+			display: flex;
+			gap: calc(4 * var(--ch));
+		}
+		.acts button {
+			border: 0;
+			padding: 0;
+			background: none;
+			font: inherit;
+			color: inherit;
+			cursor: pointer;
+		}
+		.acts a:hover,
+		.acts button:hover {
+			text-decoration: underline;
+		}
+		button.row {
+			width: 100%;
+			border: 0;
+			background: none;
+			font: inherit;
+			color: inherit;
+			text-align: start;
+			cursor: pointer;
+		}
+		.about dl {
+			display: grid;
+			grid-template-columns: calc(17 * var(--ch)) minmax(0, 1fr);
+			margin: 0;
+			line-height: var(--lh);
+		}
+		.about dt {
+			grid-column: 1;
+			padding-left: calc(3 * var(--u));
+			color: var(--line);
+		}
+		.about dd {
+			grid-column: 2;
+			margin: 0;
+			white-space: nowrap;
+			overflow: hidden;
+		}
+		.about dd a:hover {
+			text-decoration: underline;
+		}
+		.shut {
+			display: flex;
+			align-self: center;
+			margin: 0 calc(4 * var(--u)) var(--u) auto;
+			border: 0;
+			padding: calc(2 * var(--u));
+			background: none;
+			color: var(--line);
+			cursor: pointer;
+		}
+		.about .shut svg {
+			width: calc(5 * var(--u));
+			height: calc(5 * var(--u));
+		}
+		.shut:hover,
+		.shut:active {
+			background: var(--tint);
+		}
+		.shut:focus-visible {
+			outline: var(--u) dotted var(--ink);
+		}
+		</style>
+		<script
+			type="application/ld+json"
+		>{"@context":"https://schema.org/","@graph":[{"@type":"WebSite","@id":"https://quilling.dev/#website","url":"https://quilling.dev/","name":"quilling.dev","description":"teq's home page","publisher":{"@id":"https://quilling.dev/#person"},"inLanguage":"en-US","alternateName":"teq"},{"@type":"ProfilePage","@id":"https://quilling.dev/","url":"https://quilling.dev/","name":"teq","isPartOf":{"@id":"https://quilling.dev/#website"},"about":{"@id":"https://quilling.dev/#person"},"mainEntity":{"@id":"https://quilling.dev/#person"},"datePublished":"2024-03-06T05:30:13+0000","description":"teq, devops engineer: how to reach them, what they're posting on Bluesky, and what they're contributing on Tangled. Also known as Timothy Quilling.","inLanguage":"en-US","dateModified":"2026-11-19T00:00:00+0000"},{"@type":"Person","@id":"https://quilling.dev/#person","name":"Timothy Quilling","alternateName":"teq","givenName":"Timothy","familyName":"Quilling","url":"https://quilling.dev/","description":"American software developer","image":"https://quilling.dev/img/avatar-drawing.webp","sameAs":["https://bsky.app/profile/quilling.dev","https://bsky.app/profile/did:plc:jrtgsidnmxaen4offglr5lsh","https://github.com/Teqed/","https://tangled.org/quilling.dev"],"worksFor":{"@type":"Organization","name":"Stelo"},"jobTitle":{"@type":"DefinedTerm","name":"DevOps Engineer"},"alumniOf":{"@type":"Organization","name":"Seminole State College of Florida","sameAs":"https://www.wikidata.org/wiki/Q7449539"},"knowsLanguage":"en"}]}</script>
+		<script src="site.js" defer></script>
+	</head>
+	<body>
+		<i id="night" hidden></i>
+		<i id="day" hidden></i>
+		<main class="sheet">
+			<div class="top">
+				<span>quilling.dev</span
+				><span class="keys"
+					><a class="key unlit" href="#night" title="night"
+						><svg
+							width="8"
+							height="14"
+							aria-hidden="true"
+							viewBox="0 0 4 7"
+							shape-rendering="crispEdges"
+						>
+							<path
+								fill="currentColor"
+								d="M1 0h3v1h-3zM0 1h2v1h-2zM0 2h1v3h-1zM0 5h2v1h-2zM1 6h3v1h-3z"
+							/>
+						</svg><span class="sr">night</span></a
+					><a class="key lit" href="#day" title="day"
+						><svg
+							width="8"
+							height="14"
+							aria-hidden="true"
+							viewBox="0 0 4 7"
+							shape-rendering="crispEdges"
+						>
+							<path
+								fill="currentColor"
+								d="M0 1h1v1h-1zM3 1h1v1h-1zM1 2h2v1h-2zM0 3h4v1h-4zM1 4h2v1h-2zM0 5h1v1h-1zM3 5h1v1h-1z"
+							/>
+						</svg><span class="sr">day</span></a
+					><button
+						type="button"
+						class="key dark"
+						id="dark"
+						aria-label="night"
+						aria-pressed="false"
+						title="night"
+					>
+						<svg
+							width="8"
+							height="14"
+							aria-hidden="true"
+							viewBox="0 0 4 7"
+							shape-rendering="crispEdges"
+						>
+							<path
+								class="moon"
+								fill="currentColor"
+								d="M1 0h3v1h-3zM0 1h2v1h-2zM0 2h1v3h-1zM0 5h2v1h-2zM1 6h3v1h-3z"
+							/>
+							<path
+								class="sun"
+								fill="currentColor"
+								d="M0 1h1v1h-1zM3 1h1v1h-1zM1 2h2v1h-2zM0 3h4v1h-4zM1 4h2v1h-2zM0 5h1v1h-1zM3 5h1v1h-1z"
+							/>
+						</svg>
+					</button><button
+						type="button"
+						class="key motion"
+						id="motion"
+						aria-label="pause motion"
+						aria-pressed="true"
+						title="play"
+						popovertarget="nojs"
+					>
+						<svg
+							width="8"
+							height="14"
+							aria-hidden="true"
+							viewBox="0 0 4 7"
+							shape-rendering="crispEdges"
+						>
+							<path
+								class="pause"
+								fill="currentColor"
+								d="M0 0h1v7h-1zM3 0h1v7h-1z"
+							/>
+							<path
+								class="play"
+								fill="currentColor"
+								d="M0 0h1v1h-1zM0 1h2v1h-2zM0 2h3v1h-3zM0 3h4v1h-4zM0 4h3v1h-3zM0 5h2v1h-2zM0 6h1v1h-1z"
+							/>
+						</svg>
+					</button><button
+						type="button"
+						class="key"
+						commandfor="about"
+						command="show-modal"
+						aria-label="about"
+						aria-haspopup="dialog"
+						title="about"
+					>
+						<svg
+							width="8"
+							height="14"
+							aria-hidden="true"
+							viewBox="0 0 4 7"
+							shape-rendering="crispEdges"
+						>
+							<path
+								fill="currentColor"
+								d="M1 0h2v1h-2zM0 1h1v1h-1zM3 1h1v1h-1zM3 2h1v1h-1zM2 3h1v1h-1zM1 4h1v1h-1zM1 6h1v1h-1z"
+							/>
+						</svg>
+					</button></span
+				>
+			</div>
+			<figure class="plate">
+				<button
+					type="button"
+					class="bx frame"
+					id="frame"
+					aria-label="pl. 1 strata, next plate"
+				>
+					<span class="art" id="art"><canvas></canvas></span>
+				</button>
+				<h1 class="wm" id="wm">
+					<canvas aria-hidden="true"></canvas
+					><canvas aria-hidden="true"></canvas><span class="sr">teq</span>
+				</h1>
+				<figcaption id="caption">
+					<span id="pl">pl. 1</span><span id="cap">strata</span>
+				</figcaption>
+			</figure>
+			<div class="log">
+				<section class="bx rule win idx" aria-label="readme">
+					<header>
+						<h2 class="hd"><span class="tab" style="--n: 6">readme</span></h2>
+						<svg
+							width="26"
+							height="24"
+							data-ic="fly"
+							aria-hidden="true"
+							viewBox="0 0 13 12"
+							shape-rendering="crispEdges"
+							style="width: calc(13*var(--u)); height: calc(12*var(--u));"
+						>
+							<g>
+								<path fill="#ff6436" d="M8 0h2v1h-2zM7 1h2v1h-2zM6 2h1v1h-1z" />
+								<path
+									fill="#e2300c"
+									d="M10 0h1v1h-1zM9 1h3v1h-3zM7 2h6v1h-6zM6 3h7v1h-7zM10 4h3v1h-3z"
+								/>
+								<path fill="#45b8ff" d="M0 2h2v1h-2zM0 3h3v1h-3zM1 4h1v1h-1z" />
+								<path
+									fill="#0a8ae0"
+									d="M2 2h1v1h-1zM3 3h2v1h-2zM2 4h3v1h-3zM1 5h4v1h-4zM2 6h2v1h-2zM3 7h1v1h-1z"
+								/>
+								<path
+									fill="#2832ae"
+									d="M5 4h1v1h-1zM6 5h1v1h-1zM6 6h1v1h-1zM7 7h1v1h-1zM7 8h1v1h-1z"
+								/>
+								<path fill="#ffa33a" d="M6 4h2v1h-2zM7 5h1v1h-1zM7 6h1v1h-1z" />
+								<path
+									fill="#ff7600"
+									d="M8 4h2v1h-2zM8 5h5v1h-5zM8 6h5v1h-5zM8 7h4v1h-4z"
+								/>
+								<path
+									fill="#0f8f22"
+									d="M5 5h1v1h-1zM4 6h2v1h-2zM4 7h3v1h-3zM4 8h3v1h-3z"
+								/>
+								<path
+									fill="#eea200"
+									d="M12 7h1v1h-1zM10 8h2v1h-2zM9 9h3v1h-3zM9 10h3v1h-3z"
+								/>
+								<path fill="#ffcf33" d="M8 8h2v1h-2zM8 9h1v1h-1z" />
+								<path
+									fill="#4cc13a"
+									d="M5 9h3v1h-3zM5 10h3v1h-3zM7 11h1v1h-1z"
+								/>
+							</g>
+							<g style="display:none">
+								<path fill="#ff6436" d="M8 0h2v1h-2zM7 1h2v1h-2zM6 2h1v1h-1z" />
+								<path
+									fill="#e2300c"
+									d="M9 1h2v1h-2zM7 2h4v1h-4zM6 3h5v1h-5zM9 4h2v1h-2z"
+								/>
+								<path fill="#45b8ff" d="M1 2h1v1h-1zM1 3h2v1h-2zM1 4h1v1h-1z" />
+								<path
+									fill="#0a8ae0"
+									d="M2 2h1v1h-1zM3 3h2v1h-2zM2 4h3v1h-3zM1 5h4v1h-4zM2 6h2v1h-2zM3 7h1v1h-1z"
+								/>
+								<path
+									fill="#2832ae"
+									d="M5 4h1v1h-1zM6 5h1v1h-1zM6 6h1v1h-1zM7 7h1v1h-1zM7 8h1v1h-1z"
+								/>
+								<path fill="#ffa33a" d="M6 4h2v1h-2zM7 5h1v1h-1zM7 6h1v1h-1z" />
+								<path
+									fill="#ff7600"
+									d="M8 4h1v1h-1zM8 5h3v1h-3zM8 6h3v1h-3zM8 7h3v1h-3z"
+								/>
+								<path
+									fill="#0f8f22"
+									d="M5 5h1v1h-1zM4 6h2v1h-2zM4 7h3v1h-3zM4 8h3v1h-3z"
+								/>
+								<path
+									fill="#eea200"
+									d="M11 7h1v1h-1zM10 8h1v1h-1zM9 9h3v1h-3zM9 10h3v1h-3z"
+								/>
+								<path fill="#ffcf33" d="M8 8h2v1h-2zM8 9h1v1h-1z" />
+								<path
+									fill="#4cc13a"
+									d="M5 9h3v1h-3zM5 10h3v1h-3zM7 11h1v1h-1z"
+								/>
+							</g>
+							<g style="display:none">
+								<path fill="#ff6436" d="M8 0h1v1h-1zM7 1h1v1h-1zM6 2h1v1h-1z" />
+								<path
+									fill="#e2300c"
+									d="M8 1h1v1h-1zM7 2h2v1h-2zM6 3h3v1h-3zM8 4h1v1h-1z"
+								/>
+								<path fill="#45b8ff" d="M2 2h1v1h-1zM2 3h2v1h-2zM2 4h1v1h-1z" />
+								<path
+									fill="#0a8ae0"
+									d="M3 2h1v1h-1zM4 3h1v1h-1zM3 4h2v1h-2zM3 5h2v1h-2zM3 6h1v1h-1zM4 7h1v1h-1z"
+								/>
+								<path
+									fill="#2832ae"
+									d="M5 4h1v1h-1zM6 5h1v1h-1zM6 6h1v1h-1zM7 7h1v1h-1zM7 8h1v1h-1z"
+								/>
+								<path fill="#ffa33a" d="M6 4h1v1h-1zM7 5h1v1h-1zM7 6h1v1h-1z" />
+								<path
+									fill="#ff7600"
+									d="M7 4h1v1h-1zM8 5h1v1h-1zM8 6h1v1h-1zM8 7h2v1h-2z"
+								/>
+								<path
+									fill="#0f8f22"
+									d="M5 5h1v1h-1zM4 6h2v1h-2zM5 7h2v1h-2zM5 8h2v1h-2z"
+								/>
+								<path fill="#ffcf33" d="M8 8h1v1h-1zM8 9h1v1h-1z" />
+								<path
+									fill="#eea200"
+									d="M9 8h1v1h-1zM9 9h2v1h-2zM9 10h2v1h-2z"
+								/>
+								<path
+									fill="#4cc13a"
+									d="M6 9h2v1h-2zM6 10h2v1h-2zM7 11h1v1h-1z"
+								/>
+							</g>
+						</svg>
+					</header>
+					<div class="me">
+						<div class="av" id="av">
+							<img
+								src="img/avatar-dither.webp"
+								width="76"
+								height="76"
+								alt="avatar of teq (Timothy Quilling): an opossum in a wizard hat"
+							>
+						</div>
+						<div>
+							<div class="row" style="--c:#d65d0e;--cf:#f4f2ea">
+								<svg
+									width="22"
+									height="14"
+									data-ic="card"
+									aria-hidden="true"
+									viewBox="0 0 11 7"
+									shape-rendering="crispEdges"
+									style="width: calc(11*var(--u)); height: calc(7*var(--u));"
+								>
+									<path
+										fill="var(--ink)"
+										d="M0 0h11v1h-11zM0 1h1v1h-1zM10 1h1v1h-1zM0 2h1v1h-1zM2 2h2v1h-2zM6 2h3v1h-3zM10 2h1v1h-1zM0 3h1v1h-1zM2 3h2v1h-2zM10 3h1v1h-1zM0 4h1v1h-1zM5 4h4v1h-4zM10 4h1v1h-1zM0 5h1v1h-1zM10 5h1v1h-1zM0 6h11v1h-11z"
+									/>
+								</svg><span class="sr">name:</span><b>^[Tt]eq$</b>
+							</div>
+							<div class="row" style="--c:#cb89a7;--cf:#1c1c1a">
+								<svg
+									width="18"
+									height="14"
+									data-ic="tag"
+									aria-hidden="true"
+									viewBox="0 0 9 7"
+									shape-rendering="crispEdges"
+									style="width: calc(9*var(--u)); height: calc(7*var(--u));"
+								>
+									<path
+										fill="var(--ink)"
+										d="M1 0h7v1h-7zM0 1h1v1h-1zM8 1h1v1h-1zM0 2h1v1h-1zM2 2h2v1h-2zM5 2h2v1h-2zM8 2h1v1h-1zM0 3h1v1h-1zM8 3h1v1h-1zM1 4h7v1h-7zM2 5h2v1h-2zM2 6h1v1h-1z"
+									/>
+								</svg><span class="sr">pronouns:</span><b>they/them</b>
+							</div>
+							<div
+								class="row"
+								style="--c:#d79921;--cf:#1c1c1a"
+								title="US eastern (EST/EDT)"
+							>
+								<svg
+									width="18"
+									height="16"
+									data-ic="clock"
+									aria-hidden="true"
+									viewBox="0 0 9 8"
+									shape-rendering="crispEdges"
+									style="width: calc(9*var(--u)); height: calc(8*var(--u));"
+								>
+									<path
+										fill="var(--ink)"
+										d="M2 0h5v1h-5zM1 1h1v1h-1zM7 1h1v1h-1zM0 2h1v1h-1zM4 2h1v1h-1zM8 2h1v1h-1zM0 3h1v1h-1zM4 3h1v1h-1zM8 3h1v1h-1zM0 4h1v1h-1zM4 4h3v1h-3zM8 4h1v1h-1zM0 5h1v1h-1zM8 5h1v1h-1zM1 6h1v1h-1zM7 6h1v1h-1zM2 7h5v1h-5z"
+									/>
+								</svg><span class="sr">time zone:</span><b>UTC−5/−4</b>
+							</div>
+							<a
+								class="row"
+								style="--c:#c1121c;--cf:#f4f2ea"
+								href="mailto:teqed@shatteredsky.net"
+								><svg
+									width="18"
+									height="14"
+									data-ic="mail"
+									aria-hidden="true"
+									viewBox="0 0 9 7"
+									shape-rendering="crispEdges"
+									style="width: calc(9*var(--u)); height: calc(7*var(--u));"
+								>
+									<path
+										fill="var(--ink)"
+										d="M0 0h9v1h-9zM0 1h2v1h-2zM7 1h2v1h-2zM0 2h1v1h-1zM2 2h1v1h-1zM6 2h1v1h-1zM8 2h1v1h-1zM0 3h1v1h-1zM3 3h1v1h-1zM5 3h1v1h-1zM8 3h1v1h-1zM0 4h1v1h-1zM4 4h1v1h-1zM8 4h1v1h-1zM0 5h1v1h-1zM8 5h1v1h-1zM0 6h9v1h-9z"
+									/>
+								</svg><span class="sr">email:</span
+								><b>teqed@shatteredsky.net</b></a
+							>
+							<button
+								class="row"
+								style="--c:#689d6a;--cf:#f4f2ea"
+								type="button"
+								commandfor="ssh"
+								command="show-modal"
+								aria-haspopup="dialog"
+							>
+								<svg
+									width="22"
+									height="14"
+									data-ic="key"
+									aria-hidden="true"
+									viewBox="0 0 11 7"
+									shape-rendering="crispEdges"
+									style="width: calc(11*var(--u)); height: calc(7*var(--u));"
+								>
+									<path
+										fill="var(--ink)"
+										d="M1 1h3v1h-3zM0 2h1v1h-1zM4 2h7v1h-7zM0 3h1v1h-1zM2 3h1v1h-1zM4 3h1v1h-1zM8 3h1v1h-1zM10 3h1v1h-1zM0 4h1v1h-1zM4 4h1v1h-1zM8 4h1v1h-1zM10 4h1v1h-1zM1 5h3v1h-3z"
+									/>
+								</svg><span class="sr">ssh key:</span><b>ed25519</b>
+							</button>
+						</div>
+					</div>
+				</section>
+				<nav
+					class="bx rule win links"
+					style="--spot:#d65d0e"
+					aria-label="badges"
+				>
+					<header>
+						<h2 class="hd"><span class="tab" style="--n: 6">badges</span></h2>
+						<svg
+							width="28"
+							height="26"
+							data-ic="globe"
+							aria-hidden="true"
+							viewBox="0 0 14 13"
+							style="width: calc(14*var(--u)); height: calc(13*var(--u));"
+						>
+							<image
+								href="img/sprites.webp"
+								x="-882"
+								y="-39"
+								width="1588"
+								height="82"
+								style="image-rendering: pixelated"
+							/>
+						</svg>
+					</header>
+					<div class="badges">
+						<a
+							class="ubar"
+							href="https://shatteredsky.net/"
+							target="_blank"
+							rel="noopener"
+							data-bar="shatter"
+							title="shattered sky"
+							><canvas width="176" height="62" aria-hidden="true"></canvas
+							><span class="sr">shattered sky</span></a
+						>
+						<span
+							class="ubar"
+							data-bar="hat"
+							role="img"
+							aria-label="teq @quilling.dev"
+							title="teq @quilling.dev"
+							><canvas
+								width="176"
+								height="62"
+								aria-hidden="true"
+							></canvas></span
+						>
+						<a
+							class="ubar"
+							href="https://tangled.org/tranquil.farm/tranquil-pds/"
+							target="_blank"
+							rel="noopener"
+							data-bar="tranquil"
+							title="tranquil-pds"
+							><canvas width="176" height="62" aria-hidden="true"></canvas
+							><span class="sr">tranquil-pds</span></a
+						>
+						<a
+							class="ubar"
+							href="https://albedo.sh/"
+							target="_blank"
+							rel="noopener"
+							data-bar="albedo"
+							title="albedo"
+							><canvas width="176" height="62" aria-hidden="true"></canvas
+							><span class="sr">albedo</span></a
+						>
+						<span
+							class="ubar"
+							data-bar="possums"
+							role="img"
+							aria-label="possums now!"
+							title="possums now!"
+							><canvas
+								width="176"
+								height="62"
+								aria-hidden="true"
+							></canvas></span
+						>
+						<a
+							class="ubar"
+							href="https://nixos.org/"
+							target="_blank"
+							rel="noopener"
+							data-bar="nixos"
+							title="powered by NixOS"
+							><canvas width="176" height="62" aria-hidden="true"></canvas
+							><span class="sr">powered by NixOS</span></a
+						>
+					</div>
+				</nav>
+				<section
+					class="bx rule win feed"
+					id="bsky"
+					style="--spot:#1982c4;--cf:#f4f2ea"
+					aria-label="bluesky"
+				>
+					<header>
+						<h2 class="hd">
+							<a
+								class="tab"
+								style="--n: 7"
+								href="https://bsky.app/profile/did:plc:jrtgsidnmxaen4offglr5lsh"
+								target="_blank"
+								rel="me noopener"
+								>bluesky</a
+							>
+						</h2>
+						<svg
+							width="30"
+							height="24"
+							data-ic="sky"
+							aria-hidden="true"
+							viewBox="0 0 15 12"
+							shape-rendering="crispEdges"
+							style="width: calc(15*var(--u)); height: calc(12*var(--u));"
+						>
+							<g>
+								<path
+									fill="#1982c4"
+									d="M11 0h2v1h-2zM10 1h3v1h-3zM9 2h4v1h-4zM8 3h5v1h-5zM7 4h6v1h-6zM7 5h6v1h-6zM7 6h5v1h-5zM7 7h4v1h-4zM7 8h5v1h-5zM8 9h5v1h-5zM8 10h4v1h-4zM9 11h2v1h-2z"
+								/>
+								<path
+									fill="#0f5f9e"
+									d="M2 1h1v1h-1zM2 2h2v1h-2zM2 3h3v1h-3zM2 4h4v1h-4zM2 5h5v1h-5zM3 6h4v1h-4zM5 7h2v1h-2zM4 8h3v1h-3zM3 9h4v1h-4zM3 10h3v1h-3zM4 11h1v1h-1z"
+								/>
+							</g>
+							<g style="display:none">
+								<path
+									fill="#1982c4"
+									d="M10 0h1v1h-1zM9 1h2v1h-2zM8 2h3v1h-3zM8 3h3v1h-3zM7 4h4v1h-4zM7 5h4v1h-4zM7 6h3v1h-3zM7 7h3v1h-3zM7 8h3v1h-3zM8 9h3v1h-3zM8 10h2v1h-2zM9 11h1v1h-1z"
+								/>
+								<path
+									fill="#0f5f9e"
+									d="M3 1h1v1h-1zM3 2h1v1h-1zM3 3h2v1h-2zM3 4h3v1h-3zM3 5h4v1h-4zM4 6h3v1h-3zM5 7h2v1h-2zM5 8h2v1h-2zM4 9h3v1h-3zM4 10h2v1h-2zM5 11h1v1h-1z"
+								/>
+							</g>
+							<g style="display:none">
+								<path
+									fill="#1982c4"
+									d="M9 0h1v1h-1zM8 1h2v1h-2zM8 2h2v1h-2zM7 3h3v1h-3zM7 4h3v1h-3zM7 5h3v1h-3zM7 6h2v1h-2zM7 7h2v1h-2zM7 8h2v1h-2zM7 9h3v1h-3zM7 10h2v1h-2zM8 11h1v1h-1z"
+								/>
+								<path
+									fill="#0f5f9e"
+									d="M4 1h1v1h-1zM4 2h1v1h-1zM4 3h2v1h-2zM4 4h2v1h-2zM4 5h3v1h-3zM5 6h2v1h-2zM6 7h1v1h-1zM5 8h2v1h-2zM5 9h2v1h-2zM5 10h2v1h-2zM5 11h1v1h-1z"
+								/>
+							</g>
+						</svg>
+					</header>
+					<a
+						class="row"
+						href="https://bsky.app/profile/quilling.dev/post/3n2k3oidpr22y"
+						target="_blank"
+						rel="noopener"
+						><span>posted</span
+						><b>my friends are in a conspiracy to have fun online together</b
+						><time datetime="2026-11-17T22:28:12.172Z">nov 17</time></a
+					>
+					<a
+						class="row"
+						href="https://bsky.app/profile/quilling.dev/post/3n2hj3iyxa22y"
+						target="_blank"
+						rel="noopener"
+						><span>posted</span><b>I dont believe in computers</b
+						><time datetime="2026-11-16T21:50:08.504Z">nov 16</time></a
+					>
+					<a
+						class="row"
+						href="https://bsky.app/profile/quilling.dev/post/3mztvu6efh22y"
+						target="_blank"
+						rel="noopener"
+						><span>posted</span
+						><b
+							>if I was in 2001: A Space Odyssey it would not have gone down
+							like that</b
+						><time datetime="2026-11-09T02:45:26.340Z">nov 9</time></a
+					>
+					<a
+						class="row"
+						href="https://bsky.app/profile/quilling.dev/post/3mzqw6wptmk2s"
+						target="_blank"
+						rel="noopener"
+						><span>posted</span><b>I love when the sky turns blue and pink</b
+						><time datetime="2026-11-07T22:13:28.204Z">nov 7</time></a
+					>
+					<a
+						class="row"
+						href="https://bsky.app/profile/quilling.dev/post/3mzju3uhhps2s"
+						target="_blank"
+						rel="noopener"
+						><span>posted</span
+						><b>I would never go anywhere without my backpack</b
+						><time datetime="2026-11-05T02:47:19.524Z">nov 5</time></a
+					>
+				</section>
+				<section
+					class="bx rule win feed"
+					id="tngl"
+					style="--spot:#689d6a;--cf:#1c1c1a"
+					aria-label="tangled"
+				>
+					<header>
+						<h2 class="hd">
+							<a
+								class="tab"
+								style="--n: 7"
+								href="https://tangled.org/quilling.dev"
+								target="_blank"
+								rel="me noopener"
+								>tangled</a
+							>
+						</h2>
+						<svg
+							width="28"
+							height="26"
+							data-ic="dolly"
+							aria-hidden="true"
+							viewBox="0 0 14 13"
+							shape-rendering="crispEdges"
+							style="width: calc(14*var(--u)); height: calc(13*var(--u)); overflow: visible;"
+						>
+							<g>
+								<path
+									fill="var(--ink)"
+									d="M4 0h2v1h-2zM7 0h3v1h-3zM3 1h8v1h-8zM2 2h10v1h-10zM1 3h12v1h-12zM0 4h4v1h-4zM8 4h6v1h-6zM0 5h4v1h-4zM9 5h5v1h-5zM0 6h3v1h-3zM5 6h1v1h-1zM7 6h1v1h-1zM10 6h4v1h-4zM1 7h2v1h-2zM5 7h1v1h-1zM7 7h1v1h-1zM10 7h3v1h-3zM2 8h3v1h-3zM10 8h2v1h-2zM1 9h4v1h-4zM8 9h4v1h-4zM1 10h12v1h-12zM2 11h10v1h-10zM3 12h3v1h-3zM7 12h5v1h-5z"
+								/>
+							</g>
+							<g style="display:none">
+								<path
+									fill="var(--ink)"
+									d="M3 0h2v1h-2zM6 0h3v1h-3zM3 1h8v1h-8zM2 2h10v1h-10zM1 3h13v1h-13zM1 4h3v1h-3zM8 4h6v1h-6zM0 5h4v1h-4zM9 5h5v1h-5zM0 6h3v1h-3zM5 6h1v1h-1zM7 6h1v1h-1zM10 6h3v1h-3zM0 7h3v1h-3zM5 7h1v1h-1zM7 7h1v1h-1zM10 7h2v1h-2zM1 8h4v1h-4zM10 8h2v1h-2zM2 9h3v1h-3zM8 9h6v1h-6zM2 10h11v1h-11zM2 11h11v1h-11zM3 12h4v1h-4zM8 12h3v1h-3z"
+								/>
+							</g>
+							<g style="display:none">
+								<path
+									fill="var(--ink)"
+									d="M5 0h4v1h-4zM2 1h9v1h-9zM2 2h11v1h-11zM1 3h12v1h-12zM1 4h4v1h-4zM8 4h6v1h-6zM0 5h3v1h-3zM10 5h3v1h-3zM0 6h4v1h-4zM5 6h1v1h-1zM7 6h1v1h-1zM10 6h2v1h-2zM0 7h3v1h-3zM5 7h1v1h-1zM7 7h1v1h-1zM11 7h2v1h-2zM0 8h3v1h-3zM9 8h5v1h-5zM2 9h4v1h-4zM9 9h4v1h-4zM3 10h11v1h-11zM2 11h11v1h-11zM3 12h5v1h-5zM9 12h1v1h-1zM5 13h1v1h-1z"
+								/>
+							</g>
+							<g style="display:none">
+								<path
+									fill="var(--ink)"
+									d="M5 0h2v1h-2zM8 0h3v1h-3zM3 1h8v1h-8zM2 2h10v1h-10zM0 3h13v1h-13zM0 4h4v1h-4zM8 4h5v1h-5zM0 5h3v1h-3zM9 5h5v1h-5zM1 6h2v1h-2zM5 6h1v1h-1zM7 6h1v1h-1zM10 6h4v1h-4zM2 7h1v1h-1zM5 7h1v1h-1zM7 7h1v1h-1zM10 7h4v1h-4zM1 8h4v1h-4zM10 8h3v1h-3zM0 9h5v1h-5zM8 9h4v1h-4zM1 10h11v1h-11zM2 11h10v1h-10zM3 12h2v1h-2zM6 12h5v1h-5zM10 13h1v1h-1z"
+								/>
+							</g>
+							<g style="display:none">
+								<path
+									fill="var(--ink)"
+									d="M5 0h3v1h-3zM9 0h1v1h-1zM3 1h9v1h-9zM1 2h11v1h-11zM1 3h4v1h-4zM6 3h7v1h-7zM0 4h4v1h-4zM8 4h5v1h-5zM1 5h2v1h-2zM9 5h5v1h-5zM2 6h1v1h-1zM5 6h1v1h-1zM7 6h1v1h-1zM9 6h5v1h-5zM0 7h4v1h-4zM5 7h1v1h-1zM7 7h1v1h-1zM10 7h4v1h-4zM0 8h4v1h-4zM10 8h4v1h-4zM1 9h4v1h-4zM7 9h1v1h-1zM9 9h3v1h-3zM1 10h10v1h-10zM2 11h9v1h-9zM5 12h6v1h-6zM8 13h2v1h-2z"
+								/>
+							</g>
+						</svg>
+					</header>
+					<a
+						class="row"
+						href="https://tangled.org/quilling.dev/nixos-config/commit/7dea9ea092e6b5a677093493d8e43e031d249e33"
+						target="_blank"
+						rel="noopener"
+						><span>pushed</span><b>nixos-config: foundry autostart worlds</b
+						><time datetime="2026-11-16T04:38:32Z">nov 16</time></a
+					>
+					<a
+						class="row"
+						href="https://tangled.org/did:web:tranquil.tranquil.farm/tranquil-pds/issues/689#comment-3n2coo4x56fqu"
+						target="_blank"
+						rel="noopener"
+						><span>comment</span
+						><b
+							>tranquil-pds: yea the todo comment does seem to pretty clearly
+							indicate they are going this direction too. I think youre right</b
+						><time datetime="2026-11-14T23:46:42.54Z">nov 14</time></a
+					>
+					<a
+						class="row"
+						href="https://tangled.org/did:web:tranquil.tranquil.farm/tranquil-pds/issues/689#comment-3n2chprpezdqu"
+						target="_blank"
+						rel="noopener"
+						><span>comment</span
+						><b>tranquil-pds: yes, we should do away with the grace period!</b
+						><time datetime="2026-11-14T21:42:22.635Z">nov 14</time></a
+					>
+					<a
+						class="row"
+						href="https://tangled.org/did:web:tranquil.tranquil.farm/tranquil-pds/issues/646#comment-3n2cbitrta2qu"
+						target="_blank"
+						rel="noopener"
+						><span>comment</span
+						><b
+							>tranquil-pds: range stuff: sure! we can pass through range.
+							actually after the next tower-http release we can probably do
+							if-range. if we also implement range for blobs that may be useful.
+							for now we can just ignore range when we see if-range headers</b
+						><time datetime="2026-11-14T19:51:07.526Z">nov 14</time></a
+					>
+					<a
+						class="row"
+						href="https://tangled.org/quilling.dev/ratlogin/commit/cb14b5e2494d2b840ced0b2fb73d9f30b1f2a777"
+						target="_blank"
+						rel="noopener"
+						><span>pushed</span
+						><b>ratlogin: reject compromised eMudhra intermediates</b
+						><time datetime="2026-10-20T21:26:11Z">oct 20</time></a
+					>
+				</section>
+			</div>
+			<div
+				id="nojs"
+				class="bx rule win about note"
+				style="--spot:#7f62a9"
+				popover
+			>
+				<header>
+					<h2 class="hd"><span class="tab" style="--n: 6">motion</span></h2>
+					<button
+						type="button"
+						class="shut"
+						popovertarget="nojs"
+						popovertargetaction="hide"
+						aria-label="close"
+						title="close"
+					>
+						<svg
+							width="10"
+							height="10"
+							aria-hidden="true"
+							viewBox="0 0 5 5"
+							shape-rendering="crispEdges"
+						>
+							<path
+								fill="currentColor"
+								d="M0 0h1v1h-1zM4 0h1v1h-1zM1 1h1v1h-1zM3 1h1v1h-1zM2 2h1v1h-1zM1 3h1v1h-1zM3 3h1v1h-1zM0 4h1v1h-1zM4 4h1v1h-1z"
+							/>
+						</svg>
+					</button>
+				</header>
+				<p>enable javascript for animations</p>
+			</div>
+			<svg width="0" height="0" aria-hidden="true" style="position: absolute">
+				<filter id="night-av" color-interpolation-filters="sRGB">
+					<feComponentTransfer>
+						<feFuncR type="linear" slope="-0.9252" intercept="1.0114" />
+						<feFuncG type="linear" slope="-0.9292" intercept="1.004" />
+						<feFuncB type="linear" slope="-0.9231" intercept="0.9647" />
+					</feComponentTransfer>
+				</filter>
+			</svg>
+			<dialog
+				id="about"
+				class="bx rule win about"
+				style="--spot:#7f62a9"
+				aria-labelledby="about-t"
+				closedby="any"
+			>
+				<header>
+					<h2 class="hd">
+						<span class="tab" id="about-t" style="--n: 5">about</span>
+					</h2>
+					<button
+						type="button"
+						class="shut"
+						commandfor="about"
+						command="close"
+						aria-label="close"
+						title="close"
+					>
+						<svg
+							width="10"
+							height="10"
+							aria-hidden="true"
+							viewBox="0 0 5 5"
+							shape-rendering="crispEdges"
+						>
+							<path
+								fill="currentColor"
+								d="M0 0h1v1h-1zM4 0h1v1h-1zM1 1h1v1h-1zM3 1h1v1h-1zM2 2h1v1h-1zM1 3h1v1h-1zM3 3h1v1h-1zM0 4h1v1h-1zM4 4h1v1h-1z"
+							/>
+						</svg>
+					</button>
+				</header>
+				<dl>
+					<dt>name</dt>
+					<dd>teq</dd>
+					<dt>government name</dt>
+					<dd>Timothy Quilling</dd>
+					<dt>attributions</dt>
+					<dd>
+						<a href="https://departuremono.com/" target="_blank" rel="noopener"
+							>Departure Mono font</a
+						>
+					</dd>
+					<dd>
+						<a href="https://nixos.org/branding/" target="_blank" rel="noopener"
+							>NixOS's snowflake</a
+						>
+					</dd>
+					<dd>
+						<a
+							href="https://tangled.org/blog/6-months/#new-logo-and-mascot-dolly"
+							target="_blank"
+							rel="noopener"
+							>Tangled's dolly</a
+						>
+					</dd>
+					<dt>inspirations</dt>
+					<dd>
+						<a
+							href="https://en.wikipedia.org/wiki/PictoChat"
+							target="_blank"
+							rel="noopener"
+							>ピクトチャット (PictoChat)</a
+						>
+					</dd>
+					<dd>
+						<a href="https://ptr.pet/" target="_blank" rel="noopener"
+							>ptr.pet</a
+						>
+					</dd>
+					<dd>
+						<a href="https://solai.style/" target="_blank" rel="noopener"
+							>solai.style</a
+						>
+					</dd>
+					<dd>
+						<a href="https://doll.systems/" target="_blank" rel="noopener"
+							>doll.systems</a
+						>
+					</dd>
+				</dl>
+			</dialog>
+			<dialog
+				id="ssh"
+				class="bx rule win about"
+				style="--spot:#689d6a"
+				aria-labelledby="ssh-t"
+				closedby="any"
+			>
+				<header>
+					<h2 class="hd">
+						<span class="tab" id="ssh-t" style="--n: 7">ssh key</span>
+					</h2>
+					<button
+						type="button"
+						class="shut"
+						commandfor="ssh"
+						command="close"
+						aria-label="close"
+						title="close"
+					>
+						<svg
+							width="10"
+							height="10"
+							aria-hidden="true"
+							viewBox="0 0 5 5"
+							shape-rendering="crispEdges"
+						>
+							<path
+								fill="currentColor"
+								d="M0 0h1v1h-1zM4 0h1v1h-1zM1 1h1v1h-1zM3 1h1v1h-1zM2 2h1v1h-1zM1 3h1v1h-1zM3 3h1v1h-1zM0 4h1v1h-1zM4 4h1v1h-1z"
+							/>
+						</svg>
+					</button>
+				</header>
+				<p class="pub">
+					ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICRc7d7TBl<wbr>5Y43KsLQZgP9ewJSmyAbC2xXDnASIa1T5B
+					teq@thoughtful
+				</p>
+				<p class="fp">
+					SHA256:YfkjLB2e4EpKB8cztc<wbr>fhmNgJQ8WTZ2li1i41+xLCXLg
+				</p>
+				<p class="acts">
+					<button type="button" class="copy" hidden>copy</button>
+					<a href="ssh.txt" target="_blank" rel="noopener">ssh.txt</a>
+				</p>
+			</dialog>
+		</main>
+	</body>
 </html>

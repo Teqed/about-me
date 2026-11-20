@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://tangled.org/quilling.dev/ratlogin</id>
+    <title>activity feed for @quilling.dev/ratlogin</title>
+    <updated>2026-10-20T21:27:00.000Z</updated>
+    <link rel="alternate" href="https://tangled.org/quilling.dev/ratlogin"/>
+    <entry>
+        <title type="html"><![CDATA[[Tag] v0.1.2]]></title>
+        <id>https://tangled.org/quilling.dev/ratlogin/tags/v0.1.2</id>
+        <link href="https://tangled.org/quilling.dev/ratlogin/tags/v0.1.2"/>
+        <updated>2026-10-20T21:27:00.000Z</updated>
+        <content type="html"><![CDATA[Tag v0.1.2 created by teq:
+
+0.1.2]]></content>
+        <author>
+            <name>teq</name>
+            <email>did:plc:jrtgsidnmxaen4offglr5lsh</email>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Commit cb14b5e] reject compromised eMudhra intermediates]]></title>
+        <id>https://tangled.org/quilling.dev/ratlogin/commit/cb14b5e2494d2b840ced0b2fb73d9f30b1f2a777</id>
+        <link href="https://tangled.org/quilling.dev/ratlogin/commit/cb14b5e2494d2b840ced0b2fb73d9f30b1f2a777"/>
+        <updated>2026-10-20T21:26:11.000Z</updated>
+        <content type="html"><![CDATA[reject compromised eMudhra intermediates
+]]></content>
+        <author>
+            <name>teq</name>
+            <email>did:plc:jrtgsidnmxaen4offglr5lsh</email>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Commit e4a55fd] lint + coverage]]></title>
+        <id>https://tangled.org/quilling.dev/ratlogin/commit/e4a55fd2f906c92ddd02eab28782bffa45b5f86d</id>
+        <link href="https://tangled.org/quilling.dev/ratlogin/commit/e4a55fd2f906c92ddd02eab28782bffa45b5f86d"/>
+        <updated>2026-09-27T15:36:59.000Z</updated>
+        <content type="html"><![CDATA[lint + coverage
+]]></content>
+        <author>
+            <name>teq</name>
+            <email>did:plc:jrtgsidnmxaen4offglr5lsh</email>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Commit 0fd7c52] cleanup readme]]></title>
+        <id>https://tangled.org/quilling.dev/ratlogin/commit/0fd7c5249f812117c72529de0fb73a5b7e5902a4</id>
+        <link href="https://tangled.org/quilling.dev/ratlogin/commit/0fd7c5249f812117c72529de0fb73a5b7e5902a4"/>
+        <updated>2026-09-27T15:21:36.000Z</updated>
+        <content type="html"><![CDATA[cleanup readme
+]]></content>
+        <author>
+            <name>teq</name>
+            <email>did:plc:jrtgsidnmxaen4offglr5lsh</email>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Commit 8045619] support custom extra css in templates and error pages]]></title>
+        <id>https://tangled.org/quilling.dev/ratlogin/commit/804561992fcde43d46ae852f09bb33062fc4b2a3</id>
+        <link href="https://tangled.org/quilling.dev/ratlogin/commit/804561992fcde43d46ae852f09bb33062fc4b2a3"/>
+        <updated>2026-09-27T11:04:31.000Z</updated>
+        <content type="html"><![CDATA[support custom extra css in templates and error pages
+]]></content>
+        <author>
+            <name>dawn</name>
+            <email>90008@klbr.net</email>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Commit c7ae33f] coverage]]></title>
+        <id>https://tangled.org/quilling.dev/ratlogin/commit/c7ae33f942da8c4a9ba73e996830776952df99cf</id>
+        <link href="https://tangled.org/quilling.dev/ratlogin/commit/c7ae33f942da8c4a9ba73e996830776952df99cf"/>
+        <updated>2026-09-19T00:54:23.000Z</updated>
+        <content type="html"><![CDATA[coverage
+]]></content>
+        <author>
+            <name>teq</name>
+            <email>did:plc:jrtgsidnmxaen4offglr5lsh</email>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Commit 457b07a] bump rustls]]></title>
+        <id>https://tangled.org/quilling.dev/ratlogin/commit/457b07a1ae96c76263f19ab2cbc4dda5231a9df2</id>
+        <link href="https://tangled.org/quilling.dev/ratlogin/commit/457b07a1ae96c76263f19ab2cbc4dda5231a9df2"/>
+        <updated>2026-09-18T18:14:00.000Z</updated>
+        <content type="html"><![CDATA[bump rustls
+]]></content>
+        <author>
+            <name>teq</name>
+            <email>did:plc:jrtgsidnmxaen4offglr5lsh</email>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Commit 0a7599a] hygiene]]></title>
+        <id>https://tangled.org/quilling.dev/ratlogin/commit/0a7599a6c9a28c3fa4ee25e05258ff0c7c04c64d</id>
+        <link href="https://tangled.org/quilling.dev/ratlogin/commit/0a7599a6c9a28c3fa4ee25e05258ff0c7c04c64d"/>
+        <updated>2026-09-18T18:13:34.000Z</updated>
+        <content type="html"><![CDATA[hygiene
+]]></content>
+        <author>
+            <name>teq</name>
+            <email>did:plc:jrtgsidnmxaen4offglr5lsh</email>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Tag] v0.1.1]]></title>
+        <id>https://tangled.org/quilling.dev/ratlogin/tags/v0.1.1</id>
+        <link href="https://tangled.org/quilling.dev/ratlogin/tags/v0.1.1"/>
+        <updated>2026-09-12T21:39:00.000Z</updated>
+        <content type="html"><![CDATA[Tag v0.1.1 created by teq:
+
+0.1.1]]></content>
+        <author>
+            <name>teq</name>
+            <email>did:plc:jrtgsidnmxaen4offglr5lsh</email>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Tag] v0.1.0]]></title>
+        <id>https://tangled.org/quilling.dev/ratlogin/tags/v0.1.0</id>
+        <link href="https://tangled.org/quilling.dev/ratlogin/tags/v0.1.0"/>
+        <updated>2026-09-12T21:38:52.000Z</updated>
+        <content type="html"><![CDATA[Tag v0.1.0 created by teq:
+
+0.1.0]]></content>
+        <author>
+            <name>teq</name>
+            <email>did:plc:jrtgsidnmxaen4offglr5lsh</email>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Commit 91fe3cc] per-client admision policy; insecure redirects; versioning notice]]></title>
+        <id>https://tangled.org/quilling.dev/ratlogin/commit/91fe3cc2a1026ab437d09b25fed1298cbb19d703</id>
+        <link href="https://tangled.org/quilling.dev/ratlogin/commit/91fe3cc2a1026ab437d09b25fed1298cbb19d703"/>
+        <updated>2026-09-12T21:38:38.000Z</updated>
+        <content type="html"><![CDATA[per-client admision policy; insecure redirects; versioning notice
+]]></content>
+        <author>
+            <name>teq</name>
+            <email>did:plc:jrtgsidnmxaen4offglr5lsh</email>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Commit f7d9e94] clear cookie on unremembered login]]></title>
+        <id>https://tangled.org/quilling.dev/ratlogin/commit/f7d9e9424c3b28f96cc56a1d4a0beb70a0cbefce</id>
+        <link href="https://tangled.org/quilling.dev/ratlogin/commit/f7d9e9424c3b28f96cc56a1d4a0beb70a0cbefce"/>
+        <updated>2026-09-10T21:17:11.000Z</updated>
+        <content type="html"><![CDATA[clear cookie on unremembered login
+]]></content>
+        <author>
+            <name>teq</name>
+            <email>did:plc:jrtgsidnmxaen4offglr5lsh</email>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Commit f53f876] minor grammar mistake 💥💥💥]]></title>
+        <id>https://tangled.org/quilling.dev/ratlogin/commit/f53f87605e63b5c57cad386e69a2caae76995e7c</id>
+        <link href="https://tangled.org/quilling.dev/ratlogin/commit/f53f87605e63b5c57cad386e69a2caae76995e7c"/>
+        <updated>2026-09-10T20:09:40.000Z</updated>
+        <content type="html"><![CDATA[minor grammar mistake 💥💥💥
+]]></content>
+        <author>
+            <name>teq</name>
+            <email>did:plc:jrtgsidnmxaen4offglr5lsh</email>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Commit 1e933d7] improve readme; simpler config and secret provisioning; document claims]]></title>
+        <id>https://tangled.org/quilling.dev/ratlogin/commit/1e933d7209cfbb6010bd40698b2f00460d87c4b4</id>
+        <link href="https://tangled.org/quilling.dev/ratlogin/commit/1e933d7209cfbb6010bd40698b2f00460d87c4b4"/>
+        <updated>2026-09-10T19:58:18.000Z</updated>
+        <content type="html"><![CDATA[improve readme; simpler config and secret provisioning; document claims
+]]></content>
+        <author>
+            <name>teq</name>
+            <email>did:plc:jrtgsidnmxaen4offglr5lsh</email>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Commit 4a0167a] fix 403 on continue]]></title>
+        <id>https://tangled.org/quilling.dev/ratlogin/commit/4a0167ae9cb003eb4e915c84fa90063b9758385e</id>
+        <link href="https://tangled.org/quilling.dev/ratlogin/commit/4a0167ae9cb003eb4e915c84fa90063b9758385e"/>
+        <updated>2026-09-10T16:20:49.000Z</updated>
+        <content type="html"><![CDATA[fix 403 on continue
+]]></content>
+        <author>
+            <name>teq</name>
+            <email>did:plc:jrtgsidnmxaen4offglr5lsh</email>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[Commit 8b8cbe6] init]]></title>
+        <id>https://tangled.org/quilling.dev/ratlogin/commit/8b8cbe6bcd94e5bb98f7bd2ba06a38ec264b4305</id>
+        <link href="https://tangled.org/quilling.dev/ratlogin/commit/8b8cbe6bcd94e5bb98f7bd2ba06a38ec264b4305"/>
+        <updated>2026-09-10T07:11:00.000Z</updated>
+        <content type="html"><![CDATA[init
+]]></content>
+        <author>
+            <name>teq</name>
+            <email>did:plc:jrtgsidnmxaen4offglr5lsh</email>
+        </author>
+    </entry>
+</feed>

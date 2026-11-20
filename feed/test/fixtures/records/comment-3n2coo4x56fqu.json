@@ -1,0 +1,17 @@
+{
+  "cid": "bafyreihhijhwhlg5377kpczzewauivovinyvhqthwwrfydieeuqiqlcehi",
+  "uri": "at://did:plc:jj6ajj6duxnlthwtnob4qyuv/org.tangled.feed.comment/3n2coo4x56fqu",
+  "value": {
+    "$type": "org.tangled.feed.comment",
+    "body": {
+      "$type": "org.tangled.markup.markdown",
+      "text": "yea the todo comment does seem to pretty clearly indicate they are going this direction too. I think youre right"
+    },
+    "createdAt": "2026-11-14T23:46:43Z",
+    "subject": {
+      "cid": "bafyreibxkhvqvw7he56bwmezvr6nxht2hv3dbhskw2surdchrzrb2kvpsy",
+      "uri": "at://did:plc:jj6ajj6duxnlthwtnob4qyuv/org.tangled.track.ticket/689"
+    },
+    "x-tngl-editor": "did:plc:jrtgsidnmxaen4offglr5lsh"
+  }
+}

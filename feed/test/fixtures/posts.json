@@ -1,0 +1,440 @@
+{
+  "records": [
+    {
+      "uri": "at://did:plc:jrtgsidnmxaen4offglr5lsh/app.bsky.feed.post/3n2mqxxigl22y",
+      "cid": "bafyreie5wxfyb7mw3itb7sz65dowhpoimp7iuunym2wlak357dwlne6yma",
+      "value": {
+        "text": "getting caught blue-handed",
+        "$type": "app.bsky.feed.post",
+        "langs": [
+          "en"
+        ],
+        "createdAt": "2026-11-18T23:54:38.101Z"
+      }
+    },
+    {
+      "uri": "at://did:plc:jrtgsidnmxaen4offglr5lsh/app.bsky.feed.post/3n2mqsn5nrc2y",
+      "cid": "bafyreih4ykhmcg5qeaeh7rb6tvszfgxx25qjpestis7mpkzk5z6zfm72la",
+      "value": {
+        "text": "I am sooo thirsty what do I do",
+        "$type": "app.bsky.feed.post",
+        "langs": [
+          "en"
+        ],
+        "createdAt": "2026-11-18T23:51:39.486Z"
+      }
+    },
+    {
+      "uri": "at://did:plc:jrtgsidnmxaen4offglr5lsh/app.bsky.feed.post/3n2mo6pisds2y",
+      "cid": "bafyreicc6u3sbti3ef6ijvkstc5vl4zayz7nf6jh7zj5he4z5vnvuyl54y",
+      "value": {
+        "text": "I remember having a conversation with nel and lewis about this in the discord like four months ago lol http status codes are weird",
+        "$type": "app.bsky.feed.post",
+        "langs": [
+          "en"
+        ],
+        "reply": {
+          "root": {
+            "cid": "bafyreiexdnrm5b7r3jysra6n2layd5qsewj3bwg62jflnxncplkdke5vz4",
+            "uri": "at://did:plc:hg7e37e3kl5m5ra7udzyw6ta/app.bsky.feed.post/3n2mcga6ffs2t"
+          },
+          "parent": {
+            "cid": "bafyreihel4dh56a7bfleebmsvltuawsfi56w22vdia3exsxd2cbwhcoefe",
+            "uri": "at://did:plc:h5wsnqetncv6lu2weom35lg2/app.bsky.feed.post/3n2mgcvqnps25"
+          }
+        },
+        "createdAt": "2026-11-18T23:04:43.380Z"
+      }
+    },
+    {
+      "uri": "at://did:plc:jrtgsidnmxaen4offglr5lsh/app.bsky.feed.post/3n2mnq7iqnk2y",
+      "cid": "bafyreigmmphf66cnmvr5bg5sfn7giwvibmm7b2s2qydu5wni3olpcjxjh4",
+      "value": {
+        "text": "saying \"grr\" and meaning it",
+        "$type": "app.bsky.feed.post",
+        "langs": [
+          "en"
+        ],
+        "createdAt": "2026-11-18T22:56:36.838Z"
+      }
+    },
+    {
+      "uri": "at://did:plc:jrtgsidnmxaen4offglr5lsh/app.bsky.feed.post/3n2mnbkvtqc2y",
+      "cid": "bafyreig7cqwe53fc7537zwkkglzmcsgkh5v6ib3xzooal55n6kln6lgukq",
+      "value": {
+        "text": "[realizing I dont care] I dont care",
+        "$type": "app.bsky.feed.post",
+        "langs": [
+          "en"
+        ],
+        "createdAt": "2026-11-18T22:48:25.486Z"
+      }
+    },
+    {
+      "uri": "at://did:plc:jrtgsidnmxaen4offglr5lsh/app.bsky.feed.post/3n2mn2tg5ms2y",
+      "cid": "bafyreifxpvktkxd5gwhdicxall24xgcxrcutxop4zn2i2vjb4oibac7z5q",
+      "value": {
+        "text": "we are adding gacha mechanics",
+        "$type": "app.bsky.feed.post",
+        "langs": [
+          "en"
+        ],
+        "createdAt": "2026-11-18T22:44:39.528Z"
+      }
+    },
+    {
+      "uri": "at://did:plc:jrtgsidnmxaen4offglr5lsh/app.bsky.feed.post/3n2mmoycbvk2y",
+      "cid": "bafyreibmq7kqfx7jkzy33tcjyeljq4aqpnbr5d7zper2diyu3xpdif2ns4",
+      "value": {
+        "text": "thank you",
+        "$type": "app.bsky.feed.post",
+        "langs": [
+          "en"
+        ],
+        "reply": {
+          "root": {
+            "cid": "bafyreie2ooc4u5u6sw6teh2fa2wqjahm5n3likkeh4mjr64iusdoo7rdba",
+            "uri": "at://did:plc:jrtgsidnmxaen4offglr5lsh/app.bsky.feed.post/3n2mltvrnik2y"
+          },
+          "parent": {
+            "cid": "bafyreieb4a34d667nj4qgsz4g3se7pyyuk7hlgq3g2zph67mp53p3oks64",
+            "uri": "at://did:plc:t3ynxfqtxgcwgsw2xorsb4x7/app.bsky.feed.post/3n2mmgnynjc2s"
+          }
+        },
+        "createdAt": "2026-11-18T22:38:01.991Z"
+      }
+    },
+    {
+      "uri": "at://did:plc:jrtgsidnmxaen4offglr5lsh/app.bsky.feed.post/3n2mmoan5f22y",
+      "cid": "bafyreihkliutrkpujhgp6kjvxygllyiuaw43iv7wiwbe4ote33skxtbm3m",
+      "value": {
+        "text": "I see. weak to fighting type",
+        "$type": "app.bsky.feed.post",
+        "langs": [
+          "en"
+        ],
+        "reply": {
+          "root": {
+            "cid": "bafyreie2ooc4u5u6sw6teh2fa2wqjahm5n3likkeh4mjr64iusdoo7rdba",
+            "uri": "at://did:plc:jrtgsidnmxaen4offglr5lsh/app.bsky.feed.post/3n2mltvrnik2y"
+          },
+          "parent": {
+            "cid": "bafyreic7ghppfkkjczl3qv7qkcv43survoeix62duhfsfxfzc7dnthsfke",
+            "uri": "at://did:plc:cg3rsw5mrnm6kohqhchnca4l/app.bsky.feed.post/3n2mmmem4q22z"
+          }
+        },
+        "createdAt": "2026-11-18T22:37:37.181Z"
+      }
+    },
+    {
+      "uri": "at://did:plc:jrtgsidnmxaen4offglr5lsh/app.bsky.feed.post/3n2mmm7fhps2y",
+      "cid": "bafyreidql6q7ghk55al4e64b27kxuuweqoizra44vlmrmvyzrk344atoya",
+      "value": {
+        "text": "I should make a website that lets you submit your scores for a leaderboard and everyone can get really toxic about it",
+        "$type": "app.bsky.feed.post",
+        "langs": [
+          "en"
+        ],
+        "reply": {
+          "root": {
+            "cid": "bafyreiahqvm2hvikip4pxdmx76d4yok66vcfqj2swkbpsp7zpclzwr72ae",
+            "uri": "at://did:plc:q7suwaz53ztc4mbiqyygbn43/app.bsky.feed.post/3n2mlsnl6is2p"
+          },
+          "parent": {
+            "cid": "bafyreidix34rzts3uttw7qi4ayp42s6ij5k2vdsmxo3ewlej57bradcvwe",
+            "uri": "at://did:plc:ende5ewdnzay43ut6xjfcwyn/app.bsky.feed.post/3n2mm5vuc5e2i"
+          }
+        },
+        "createdAt": "2026-11-18T22:36:28.772Z"
+      }
+    },
+    {
+      "uri": "at://did:plc:jrtgsidnmxaen4offglr5lsh/app.bsky.feed.post/3n2mma3zkrk2y",
+      "cid": "bafyreifad6raalx3h4arjr5p2ai5jnlbannmvnuy6kfsuuuq4ujcgn2h6q",
+      "value": {
+        "text": "framework for monetization, probably?",
+        "$type": "app.bsky.feed.post",
+        "langs": [
+          "en"
+        ],
+        "reply": {
+          "root": {
+            "cid": "bafyreiahqvm2hvikip4pxdmx76d4yok66vcfqj2swkbpsp7zpclzwr72ae",
+            "uri": "at://did:plc:q7suwaz53ztc4mbiqyygbn43/app.bsky.feed.post/3n2mlsnl6is2p"
+          },
+          "parent": {
+            "cid": "bafyreighf5pva4zd6knzg6appfek5q4hzrxzkc7fvm54gqpr4lxt3rwzky",
+            "uri": "at://did:plc:ende5ewdnzay43ut6xjfcwyn/app.bsky.feed.post/3n2mm5fjinm2i"
+          }
+        },
+        "createdAt": "2026-11-18T22:29:42.583Z"
+      }
+    },
+    {
+      "uri": "at://did:plc:jrtgsidnmxaen4offglr5lsh/app.bsky.feed.post/3n2mm3lbi7k2y",
+      "cid": "bafyreig274wv3j7iexeu4zmwgubge476edwzd4ex7zo34eyimkfqyaesp4",
+      "value": {
+        "text": "thank goodness",
+        "$type": "app.bsky.feed.post",
+        "langs": [
+          "en"
+        ],
+        "reply": {
+          "root": {
+            "cid": "bafyreie2ooc4u5u6sw6teh2fa2wqjahm5n3likkeh4mjr64iusdoo7rdba",
+            "uri": "at://did:plc:jrtgsidnmxaen4offglr5lsh/app.bsky.feed.post/3n2mltvrnik2y"
+          },
+          "parent": {
+            "cid": "bafyreickxevkh4anhqvv5ye4qgzlsol5fj2io2nu3hhcgk2joxajxhbubu",
+            "uri": "at://did:plc:yfklixyvt4y3irrkdb4mtvqn/app.bsky.feed.post/3n2mlvsvg5y2r"
+          }
+        },
+        "createdAt": "2026-11-18T22:27:10.798Z"
+      }
+    },
+    {
+      "uri": "at://did:plc:jrtgsidnmxaen4offglr5lsh/app.bsky.feed.post/3n2mm2sv5j22y",
+      "cid": "bafyreiebxbyo3q7s3h3mxtrak53eeak4gbmzqzpqpzisqqwnefgw7r4aea",
+      "value": {
+        "text": "this means theyre tracking views appview-side too ? yuck ..",
+        "$type": "app.bsky.feed.post",
+        "langs": [
+          "en"
+        ],
+        "reply": {
+          "root": {
+            "cid": "bafyreiahqvm2hvikip4pxdmx76d4yok66vcfqj2swkbpsp7zpclzwr72ae",
+            "uri": "at://did:plc:q7suwaz53ztc4mbiqyygbn43/app.bsky.feed.post/3n2mlsnl6is2p"
+          },
+          "parent": {
+            "cid": "bafyreiahqvm2hvikip4pxdmx76d4yok66vcfqj2swkbpsp7zpclzwr72ae",
+            "uri": "at://did:plc:q7suwaz53ztc4mbiqyygbn43/app.bsky.feed.post/3n2mlsnl6is2p"
+          }
+        },
+        "createdAt": "2026-11-18T22:26:45.229Z"
+      }
+    },
+    {
+      "uri": "at://did:plc:jrtgsidnmxaen4offglr5lsh/app.bsky.feed.post/3n2mltvrnik2y",
+      "cid": "bafyreie2ooc4u5u6sw6teh2fa2wqjahm5n3likkeh4mjr64iusdoo7rdba",
+      "value": {
+        "text": "is your belly button the normal kind or the freaky kind",
+        "$type": "app.bsky.feed.post",
+        "langs": [
+          "en"
+        ],
+        "createdAt": "2026-11-18T22:22:53.379Z"
+      }
+    },
+    {
+      "uri": "at://did:plc:jrtgsidnmxaen4offglr5lsh/app.bsky.feed.post/3n2mlk7bx4c2y",
+      "cid": "bafyreibrarv2b5vwgoj6toapz2pd5vc2nfkksets6y7loh6nzjvr422h2y",
+      "value": {
+        "text": "???? 😭",
+        "$type": "app.bsky.feed.post",
+        "langs": [
+          "en"
+        ],
+        "reply": {
+          "root": {
+            "cid": "bafyreicc2jjzk4chqrafgpj657kxr76omssodisyelatnooi6stk6razni",
+            "uri": "at://did:plc:xyfbxioupsp6stebb7rn4wjd/app.bsky.feed.post/3n2mlj54vl22h"
+          },
+          "parent": {
+            "cid": "bafyreiegqzjdxm7y4k2k4fgerwajvrqp5hingwxnrkqrrr2zhcs5xexawa",
+            "uri": "at://did:plc:xyfbxioupsp6stebb7rn4wjd/app.bsky.feed.post/3n2mlj55cbc2h"
+          }
+        },
+        "createdAt": "2026-11-18T22:17:27.805Z"
+      }
+    },
+    {
+      "uri": "at://did:plc:jrtgsidnmxaen4offglr5lsh/app.bsky.feed.post/3n2mlg4coyk2y",
+      "cid": "bafyreicnn22khajtumsg6uphezyra32advarzpwzgf42kjvnylavkjbd4q",
+      "value": {
+        "text": "looks cute!",
+        "$type": "app.bsky.feed.post",
+        "langs": [
+          "en"
+        ],
+        "reply": {
+          "root": {
+            "cid": "bafyreidz45spx5umt2vdqp47vu5me2kcuezkdnwwujqqvpkxwyrttobvju",
+            "uri": "at://did:plc:gq4fo3u6tqzzdkjlwzpb23tj/app.bsky.feed.post/3n2mldcyj3c23"
+          },
+          "parent": {
+            "cid": "bafyreidz45spx5umt2vdqp47vu5me2kcuezkdnwwujqqvpkxwyrttobvju",
+            "uri": "at://did:plc:gq4fo3u6tqzzdkjlwzpb23tj/app.bsky.feed.post/3n2mldcyj3c23"
+          }
+        },
+        "createdAt": "2026-11-18T22:15:10.466Z"
+      }
+    },
+    {
+      "uri": "at://did:plc:jrtgsidnmxaen4offglr5lsh/app.bsky.feed.post/3n2mjrbgd7s2y",
+      "cid": "bafyreiein3glhju42qh6baax3cgi45zrmnkmq4mwenshctgtulwjxiicsq",
+      "value": {
+        "text": "brimming with energy",
+        "$type": "app.bsky.feed.post",
+        "langs": [
+          "en"
+        ],
+        "createdAt": "2026-11-18T21:45:37.443Z"
+      }
+    },
+    {
+      "uri": "at://did:plc:jrtgsidnmxaen4offglr5lsh/app.bsky.feed.post/3n2mdzg6op22y",
+      "cid": "bafyreia3vxfppn7j2lmubcu6xwykvd7x7d6muqxwsrb3iuvopqkqy2r4he",
+      "value": {
+        "text": "status: manifesting",
+        "$type": "app.bsky.feed.post",
+        "langs": [
+          "en"
+        ],
+        "createdAt": "2026-11-18T20:02:48.420Z"
+      }
+    },
+    {
+      "uri": "at://did:plc:jrtgsidnmxaen4offglr5lsh/app.bsky.feed.post/3n2m7ksysis2y",
+      "cid": "bafyreib2penjawie4e7ububnq4re54tp6mgfixaxqkdqe7sc6jedtyuim4",
+      "value": {
+        "text": "- nightylamp",
+        "$type": "app.bsky.feed.post",
+        "langs": [
+          "en"
+        ],
+        "reply": {
+          "root": {
+            "cid": "bafyreibbp6xoplooc5z7vb2zdfhgifwvsgg7mvclqxlpgtkn7mfrxt4vgu",
+            "uri": "at://did:plc:n2ptcjt3iwwdwfngvmghsk56/app.bsky.feed.post/3n2m72lal2k25"
+          },
+          "parent": {
+            "cid": "bafyreibbp6xoplooc5z7vb2zdfhgifwvsgg7mvclqxlpgtkn7mfrxt4vgu",
+            "uri": "at://did:plc:n2ptcjt3iwwdwfngvmghsk56/app.bsky.feed.post/3n2m72lal2k25"
+          }
+        },
+        "createdAt": "2026-11-18T18:43:03.576Z"
+      }
+    },
+    {
+      "uri": "at://did:plc:jrtgsidnmxaen4offglr5lsh/app.bsky.feed.post/3n2m5cv4rfs2y",
+      "cid": "bafyreiaubedgkyzxlhonlb7qjzc4xz53aqyl3ei7wfewu3cpflwh7sbode",
+      "value": {
+        "text": "a new gta game? I guess my dad will be excited",
+        "$type": "app.bsky.feed.post",
+        "langs": [
+          "en"
+        ],
+        "createdAt": "2026-11-18T18:02:49.883Z"
+      }
+    },
+    {
+      "uri": "at://did:plc:jrtgsidnmxaen4offglr5lsh/app.bsky.feed.post/3n2m2ubnzes2y",
+      "cid": "bafyreieif2l43hyy4kqpyy3slygkbhn7rrq7bjczskv7awaxodpwgf6mie",
+      "value": {
+        "text": "You’re not just learning a new programming language—you’re joining a movement.",
+        "$type": "app.bsky.feed.post",
+        "langs": [
+          "en"
+        ],
+        "reply": {
+          "root": {
+            "cid": "bafyreifrompf6dqe62vbtu74zbnvwcnht4darxidkzd5esjsaa65mxrakm",
+            "uri": "at://did:plc:ht4v7ms76njx5mlit7lwlrdw/app.bsky.feed.post/3n2luytndqk27"
+          },
+          "parent": {
+            "cid": "bafyreifrompf6dqe62vbtu74zbnvwcnht4darxidkzd5esjsaa65mxrakm",
+            "uri": "at://did:plc:ht4v7ms76njx5mlit7lwlrdw/app.bsky.feed.post/3n2luytndqk27"
+          }
+        },
+        "createdAt": "2026-11-18T17:18:52.232Z"
+      }
+    },
+    {
+      "uri": "at://did:plc:jrtgsidnmxaen4offglr5lsh/app.bsky.feed.post/3n2kbgaxctc2y",
+      "cid": "bafyreictphbfxi6oegogchg2seiedsgx7rrynyoafscnu36hcovaxxbjse",
+      "value": {
+        "text": "no way",
+        "$type": "app.bsky.feed.post",
+        "langs": [
+          "en"
+        ],
+        "reply": {
+          "root": {
+            "cid": "bafyreih42a256wcoh2i57qaiig2y2kab7ilxcbuoxjy2343tbsg7jrsn2q",
+            "uri": "at://did:plc:puk5v6kcdtqowovrwj2sijlm/app.bsky.feed.post/3n2k7lofezk2z"
+          },
+          "parent": {
+            "cid": "bafyreih42a256wcoh2i57qaiig2y2kab7ilxcbuoxjy2343tbsg7jrsn2q",
+            "uri": "at://did:plc:puk5v6kcdtqowovrwj2sijlm/app.bsky.feed.post/3n2k7lofezk2z"
+          }
+        },
+        "createdAt": "2026-11-18T00:10:58.441Z"
+      }
+    },
+    {
+      "uri": "at://did:plc:jrtgsidnmxaen4offglr5lsh/app.bsky.feed.post/3n2k3oidpr22y",
+      "cid": "bafyreibxnzcx5haxykhfu3tpdtwsvfffahobqlv6mlqliyliggf5n3pfma",
+      "value": {
+        "text": "my friends are in a conspiracy to have fun online together",
+        "$type": "app.bsky.feed.post",
+        "langs": [
+          "en"
+        ],
+        "createdAt": "2026-11-17T22:28:12.172Z"
+      }
+    },
+    {
+      "uri": "at://did:plc:jrtgsidnmxaen4offglr5lsh/app.bsky.feed.post/3n2js5yfvms2y",
+      "cid": "bafyreidy5nwyllhpcgqlfvc274fbpdwxan56u3lcx4jpls25ljdzrpfdne",
+      "value": {
+        "text": "",
+        "$type": "app.bsky.feed.post",
+        "embed": {
+          "$type": "app.bsky.embed.record",
+          "record": {
+            "cid": "bafyreicnfo5erjtaxgracekx2karlisoyog56cgcaynllo33picvsru23a",
+            "uri": "at://did:plc:jrtgsidnmxaen4offglr5lsh/app.bsky.feed.post/3mwotrjuul22u"
+          }
+        },
+        "langs": [
+          "en"
+        ],
+        "reply": {
+          "root": {
+            "cid": "bafyreic76gfzmrri2fgj26lw3cukh3i7zj6ktbjttnpo6ls4nwaedosh5u",
+            "uri": "at://did:plc:allu5vs3gnm2wm7jzf4rad3r/app.bsky.feed.post/3n2js2s5ukc2m"
+          },
+          "parent": {
+            "cid": "bafyreic76gfzmrri2fgj26lw3cukh3i7zj6ktbjttnpo6ls4nwaedosh5u",
+            "uri": "at://did:plc:allu5vs3gnm2wm7jzf4rad3r/app.bsky.feed.post/3n2js2s5ukc2m"
+          }
+        },
+        "createdAt": "2026-11-17T19:37:54.920Z"
+      }
+    },
+    {
+      "uri": "at://did:plc:jrtgsidnmxaen4offglr5lsh/app.bsky.feed.post/3n2jn24fods2y",
+      "cid": "bafyreicfqg2xervi7n5ugo3u4l53d33mjvi4ixappb6qcluegm7r4vkfyy",
+      "value": {
+        "text": "pedantic lint fans winning huge these days",
+        "$type": "app.bsky.feed.post",
+        "langs": [
+          "en"
+        ],
+        "reply": {
+          "root": {
+            "cid": "bafyreih5lee2nhatxsymxm2zzxzs26zhaqgrut3j4alhe6v53ru2nelrbi",
+            "uri": "at://did:plc:ragtjsm2j2vknwkz3zp4oxrd/app.bsky.feed.post/3n2jldzmh722i"
+          },
+          "parent": {
+            "cid": "bafyreih5lee2nhatxsymxm2zzxzs26zhaqgrut3j4alhe6v53ru2nelrbi",
+            "uri": "at://did:plc:ragtjsm2j2vknwkz3zp4oxrd/app.bsky.feed.post/3n2jldzmh722i"
+          }
+        },
+        "createdAt": "2026-11-17T18:06:16.179Z"
+      }
+    }
+  ],
+  "cursor": "3n2iq25argk2y"
+}

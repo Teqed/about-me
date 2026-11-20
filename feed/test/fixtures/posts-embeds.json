@@ -1,0 +1,145 @@
+{
+  "records": [
+    {
+      "uri": "at://did:plc:jrtgsidnmxaen4offglr5lsh/app.bsky.feed.post/3n2i36rjgtc2x",
+      "cid": "bafyreigbxruz4zfpsfqviks5q6mspks34xvkwril3k37it5gld42lzbpke",
+      "value": {
+        "text": "you can boldly go. Im doing holodeck stuff",
+        "$type": "app.bsky.feed.post",
+        "embed": {
+          "$type": "app.bsky.embed.record",
+          "record": {
+            "cid": "bafyreib2jqniamyppkhsdiizchikkz7blcwswv2fxz5ab72qabe3lk5kd4",
+            "uri": "at://did:plc:jrtgsidnmxaen4offglr5lsh/app.bsky.feed.post/3meu3zx4bi22w"
+          }
+        },
+        "langs": [
+          "en"
+        ],
+        "createdAt": "2026-11-17T03:14:05.450Z"
+      }
+    },
+    {
+      "uri": "at://did:plc:jrtgsidnmxaen4offglr5lsh/app.bsky.feed.post/3n25n3ov62s2s",
+      "cid": "bafyreiaugufilpptpcka5ncbtczgqtizdcimszjonsyo4xaexsj7g2bh4e",
+      "value": {
+        "text": "I am sooo ready for the weekend",
+        "$type": "app.bsky.feed.post",
+        "embed": {
+          "$type": "app.bsky.embed.external",
+          "external": {
+            "uri": "https://m.youtube.com/watch?v=pWfcA13TRG0",
+            "thumb": {
+              "ref": {
+                "$link": "bafkreifx4b2s7src47ofridlr5yb4hwzaixpfgpn2ncc3o7bi72umatkfi"
+              },
+              "size": 62410,
+              "$type": "blob",
+              "mimeType": "image/jpeg"
+            },
+            "title": "Luci Gang - TYPE SHI (feat. HYOI) (Official Video)",
+            "description": "YouTube video by Luci Gang"
+          }
+        },
+        "langs": [
+          "en"
+        ],
+        "createdAt": "2026-11-12T23:35:12.255Z"
+      }
+    },
+    {
+      "uri": "at://did:plc:jrtgsidnmxaen4offglr5lsh/app.bsky.feed.post/3n24szh5hlk2s",
+      "cid": "bafyreibobp7l6zcijks7e5vnofzh2wbpzqrwwiisk265emro44fbd74ijm",
+      "value": {
+        "text": "nice punch card whats printed on yours---",
+        "$type": "app.bsky.feed.post",
+        "embed": {
+          "$type": "app.bsky.embed.images",
+          "images": [
+            {
+              "alt": "ibm punch cards with programs/data written on them",
+              "image": {
+                "ref": {
+                  "$link": "bafkreicancs3eslkknfx6hneuffq2fmqrdwvzrr6pwcilyr5ogc6ro6jqy"
+                },
+                "size": 414968,
+                "$type": "blob",
+                "mimeType": "image/jpeg"
+              },
+              "aspectRatio": {
+                "width": 1280,
+                "height": 968
+              }
+            }
+          ]
+        },
+        "langs": [
+          "en"
+        ],
+        "reply": {
+          "root": {
+            "cid": "bafyreiaeq3vib5wjzkamu3jw5lthqjfb7aildtxg5dahe7p5mh5fpqxq24",
+            "uri": "at://did:plc:gq4fo3u6tqzzdkjlwzpb23tj/app.bsky.feed.post/3n24svxs76c2c"
+          },
+          "parent": {
+            "cid": "bafyreiaeq3vib5wjzkamu3jw5lthqjfb7aildtxg5dahe7p5mh5fpqxq24",
+            "uri": "at://did:plc:gq4fo3u6tqzzdkjlwzpb23tj/app.bsky.feed.post/3n24svxs76c2c"
+          }
+        },
+        "createdAt": "2026-11-12T15:48:39.733Z"
+      }
+    },
+    {
+      "uri": "at://did:plc:jrtgsidnmxaen4offglr5lsh/app.bsky.feed.post/3mzqktoncy22s",
+      "cid": "bafyreiervaus6xfrgmluro5xjz42h2ce4e2qckkf7g2n653ofjdhjevlsm",
+      "value": {
+        "text": "juliet added this to pdsls not even a day later so go use that instead\npdsls.dev/streams?type...",
+        "$type": "app.bsky.feed.post",
+        "embed": {
+          "$type": "app.bsky.embed.recordWithMedia",
+          "media": {
+            "$type": "app.bsky.embed.external",
+            "external": {
+              "uri": "https://pdsls.dev/streams?type=plc",
+              "thumb": {
+                "ref": {
+                  "$link": "bafkreih6nea3gwkceat5kutlxhvllwfojkwzrt32nfhyrpj6bjwacy26zq"
+                },
+                "size": 174462,
+                "$type": "blob",
+                "mimeType": "image/jpeg"
+              },
+              "title": "Live streams",
+              "description": "Inspect events from the AT Protocol network."
+            }
+          },
+          "record": {
+            "$type": "app.bsky.embed.record",
+            "record": {
+              "cid": "bafyreiewsemuaogq3zaullyum2mjnnnp7cexpiwz5bhubn4vznes7k6eye",
+              "uri": "at://did:plc:jrtgsidnmxaen4offglr5lsh/app.bsky.feed.post/3myxiywp3p22i"
+            }
+          }
+        },
+        "langs": [
+          "en"
+        ],
+        "facets": [
+          {
+            "index": {
+              "byteEnd": 96,
+              "byteStart": 71
+            },
+            "features": [
+              {
+                "uri": "https://pdsls.dev/streams?type=plc",
+                "$type": "app.bsky.richtext.facet#link"
+              }
+            ]
+          }
+        ],
+        "createdAt": "2026-11-07T18:50:19.480Z"
+      }
+    }
+  ]
+}

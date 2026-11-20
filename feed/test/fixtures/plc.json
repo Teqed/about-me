@@ -1,0 +1,29 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    "https://w3id.org/security/multikey/v1",
+    "https://w3id.org/security/suites/secp256k1-2019/v1"
+  ],
+  "id": "did:plc:jj6ajj6duxnlthwtnob4qyuv",
+  "alsoKnownAs": [],
+  "verificationMethod": [
+    {
+      "id": "did:plc:jj6ajj6duxnlthwtnob4qyuv#atproto",
+      "type": "Multikey",
+      "controller": "did:plc:jj6ajj6duxnlthwtnob4qyuv",
+      "publicKeyMultibase": "zQ3shUgNX5gvZMqe4ZCmhoRXXY2nwFkgmWnouTaAjExM8AViT"
+    }
+  ],
+  "service": [
+    {
+      "id": "#atproto_pds",
+      "type": "AtprotoPersonalDataServer",
+      "serviceEndpoint": "https://knot1.tangled.sh"
+    },
+    {
+      "id": "#tangled_knot",
+      "type": "TangledKnot",
+      "serviceEndpoint": "https://knot1.tangled.sh"
+    }
+  ]
+}
