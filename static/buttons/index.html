@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>badges · teq</title>
+		<meta
+			name="description"
+			content="88×31 buttons from quilling.dev, animated and still, free to save and use."
+		>
+		<meta name="color-scheme" content="light dark">
+		<link rel="canonical" href="https://quilling.dev/buttons/">
+		<link rel="icon" href="/favicon.ico">
+		<link
+			rel="preload"
+			href="/fonts/DepartureMono-Regular.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin
+		>
+		<script>
+		if (!/[?&]js=no\b/.test(location.search)) {
+			const h = document.documentElement;
+			let s;
+			h.classList.add("js");
+			h.style.setProperty("--z", Math.min(1, innerWidth / 640));
+			try {
+				s = localStorage.night;
+			} catch {}
+			if (
+				location.hash === "#night" ||
+				(location.hash !== "#day" &&
+					(s ? s === "1" : matchMedia("(prefers-color-scheme: dark)").matches))
+			)
+				h.classList.add("night");
+		}
+		</script>
+		<style>
+		@font-face {
+			font-family: "Departure Mono";
+			src: url("/fonts/DepartureMono-Regular.woff2") format("woff2");
+			font-display: block;
+		}
+		:root {
+			--paper: #f2f0ea;
+			--ink: #1c1c1a;
+			--spot: #d65d0e;
+			--u: 2px;
+			--ch: calc(2em / 3);
+			--lh: calc(16 * var(--u));
+			--line: color-mix(in oklab, var(--spot) 48%, var(--ink));
+			--tint: color-mix(in oklab, var(--spot) 34%, var(--paper));
+			color-scheme: light;
+		}
+		html.night {
+			--paper: #22211e;
+			--ink: #e8e6de;
+			color-scheme: dark;
+		}
+		@media (prefers-color-scheme: dark) {
+			html:not(.js) {
+				--paper: #22211e;
+				--ink: #e8e6de;
+				color-scheme: dark;
+			}
+		}
+		* {
+			box-sizing: border-box;
+		}
+		html {
+			background: var(--paper);
+			scrollbar-gutter: stable both-edges;
+		}
+		body {
+			margin: 0;
+			color: var(--ink);
+			font:
+				calc(8.25 * var(--u)) / var(--lh) "Departure Mono",
+				monospace;
+		}
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+		a:focus-visible {
+			outline: var(--u) dotted var(--ink);
+			outline-offset: calc(3 * var(--u));
+		}
+		.sheet {
+			zoom: var(--z, 1);
+			max-width: calc(608 * var(--u));
+			margin: 0 auto;
+			padding: calc(12 * var(--u)) calc(12 * var(--u)) calc(32 * var(--u));
+		}
+		.top {
+			margin: 0 0 calc(8 * var(--u));
+		}
+		.win {
+			position: relative;
+			padding-top: var(--lh);
+			background:
+				linear-gradient(var(--paper) calc(100% - var(--u)), var(--tint) 0) 0 0 /
+				100% var(--lh);
+			box-shadow:
+				0 calc(-1 * var(--u)) 0 0 var(--line),
+				0 var(--u) 0 0 var(--line),
+				calc(-1 * var(--u)) 0 0 0 var(--line),
+				var(--u) 0 0 0 var(--line);
+		}
+		.tab {
+			position: absolute;
+			inset: 0 auto auto 0;
+			isolation: isolate;
+			background: var(--line);
+			color: var(--line);
+			padding: 0 calc(5 * var(--u)) var(--u) calc(3 * var(--u));
+			font: inherit;
+			line-height: calc(var(--lh) - var(--u));
+			margin: 0;
+		}
+		.tab,
+		.tab::before {
+			clip-path: polygon(
+				0 0,
+				100% 0,
+				100% calc(100% - 2 * var(--u)),
+				calc(100% - var(--u)) calc(100% - 2 * var(--u)),
+				calc(100% - var(--u)) calc(100% - var(--u)),
+				calc(100% - 2 * var(--u)) calc(100% - var(--u)),
+				calc(100% - 2 * var(--u)) 100%,
+				0 100%
+			);
+		}
+		.tab::before {
+			content: "";
+			position: absolute;
+			z-index: -1;
+			inset: 0 var(--u) var(--u) 0;
+			background: var(--tint);
+		}
+		figure {
+			margin: 0;
+			padding: 0 calc(3 * var(--u));
+		}
+		figure {
+			display: grid;
+			grid-template-columns: auto minmax(0, 1fr);
+			gap: 0 calc(3 * var(--ch));
+		}
+		.art {
+			grid-row: span 2;
+			display: flex;
+			gap: calc(4 * var(--u));
+			align-self: start;
+			justify-self: start;
+			margin-top: var(--lh);
+			padding-right: calc(4 * var(--u));
+			background: var(--paper);
+		}
+		.art img {
+			width: calc(88 * var(--u));
+			height: calc(31 * var(--u));
+			image-rendering: pixelated;
+		}
+		figcaption {
+			grid-column: 2;
+			margin-top: var(--lh);
+			display: flex;
+			gap: calc(2 * var(--ch));
+			white-space: nowrap;
+			overflow: hidden;
+		}
+		figcaption b {
+			font-weight: 400;
+		}
+		.to {
+			color: var(--line);
+		}
+		.files {
+			margin: 0;
+			grid-column: 2;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0 calc(2 * var(--ch));
+		}
+		@media (max-width: 639px) {
+			figure {
+				grid-template-columns: minmax(0, 1fr);
+			}
+			.art,
+			figcaption,
+			.files {
+				grid-column: 1;
+				grid-row: auto;
+			}
+			figcaption {
+				margin-top: 0;
+			}
+		}
+		</style>
+	</head>
+	<body>
+		<main class="sheet">
+			<p class="top"><a href="/">quilling.dev</a></p>
+			<section class="win" aria-labelledby="t">
+				<h1 class="tab" id="t">badges</h1>
+				<figure>
+					<span class="art"
+						><img
+							src="shattered-sky.gif"
+							width="88"
+							height="31"
+							alt="shattered sky, animated"
+						><img
+							src="shattered-sky.png"
+							width="88"
+							height="31"
+							alt="shattered sky"
+						></span
+					>
+					<figcaption>
+						<b>shattered sky</b
+						><a class="to" href="https://shatteredsky.net/">shatteredsky.net</a>
+					</figcaption>
+					<p class="files">
+						<a href="shattered-sky.gif" download>gif</a>
+						<a href="shattered-sky.webp" download>webp</a>
+						<a href="shattered-sky.png" download>png</a>
+						<a href="shattered-sky@2x.gif" download>2× gif</a>
+						<a href="shattered-sky@2x.webp" download>2× webp</a>
+						<a href="shattered-sky@2x.png" download>2× png</a>
+					</p>
+				</figure>
+				<figure>
+					<span class="art"
+						><img
+							src="teq.gif"
+							width="88"
+							height="31"
+							alt="teq @quilling.dev, animated"
+						><img
+							src="teq.png"
+							width="88"
+							height="31"
+							alt="teq @quilling.dev"
+						></span
+					>
+					<figcaption>
+						<b>teq @quilling.dev</b
+						><a class="to" href="https://quilling.dev/">quilling.dev</a>
+					</figcaption>
+					<p class="files">
+						<a href="teq.gif" download>gif</a>
+						<a href="teq.webp" download>webp</a>
+						<a href="teq.png" download>png</a>
+						<a href="teq@2x.gif" download>2× gif</a>
+						<a href="teq@2x.webp" download>2× webp</a>
+						<a href="teq@2x.png" download>2× png</a>
+					</p>
+				</figure>
+				<figure>
+					<span class="art"
+						><img
+							src="tranquil-pds.gif"
+							width="88"
+							height="31"
+							alt="tranquil pds, animated"
+						><img
+							src="tranquil-pds.png"
+							width="88"
+							height="31"
+							alt="tranquil pds"
+						></span
+					>
+					<figcaption>
+						<b>tranquil pds</b
+						><a
+							class="to"
+							href="https://tangled.org/tranquil.farm/tranquil-pds/"
+							>tangled.org/tranquil.farm/tranquil-pds</a
+						>
+					</figcaption>
+					<p class="files">
+						<a href="tranquil-pds.gif" download>gif</a>
+						<a href="tranquil-pds.webp" download>webp</a>
+						<a href="tranquil-pds.png" download>png</a>
+						<a href="tranquil-pds@2x.gif" download>2× gif</a>
+						<a href="tranquil-pds@2x.webp" download>2× webp</a>
+						<a href="tranquil-pds@2x.png" download>2× png</a>
+					</p>
+				</figure>
+				<figure>
+					<span class="art"
+						><img
+							src="albedo.gif"
+							width="88"
+							height="31"
+							alt="albedo, animated"
+						><img src="albedo.png" width="88" height="31" alt="albedo"></span
+					>
+					<figcaption>
+						<b>albedo</b><a class="to" href="https://albedo.sh/">albedo.sh</a>
+					</figcaption>
+					<p class="files">
+						<a href="albedo.gif" download>gif</a>
+						<a href="albedo.webp" download>webp</a>
+						<a href="albedo.png" download>png</a>
+						<a href="albedo@2x.gif" download>2× gif</a>
+						<a href="albedo@2x.webp" download>2× webp</a>
+						<a href="albedo@2x.png" download>2× png</a>
+					</p>
+				</figure>
+				<figure>
+					<span class="art"
+						><img
+							src="possums-now.gif"
+							width="88"
+							height="31"
+							alt="possums now!, animated"
+						><img
+							src="possums-now.png"
+							width="88"
+							height="31"
+							alt="possums now!"
+						></span
+					>
+					<figcaption><b>possums now!</b><span class="to"></span></figcaption>
+					<p class="files">
+						<a href="possums-now.gif" download>gif</a>
+						<a href="possums-now.webp" download>webp</a>
+						<a href="possums-now.png" download>png</a>
+						<a href="possums-now@2x.gif" download>2× gif</a>
+						<a href="possums-now@2x.webp" download>2× webp</a>
+						<a href="possums-now@2x.png" download>2× png</a>
+					</p>
+				</figure>
+				<figure>
+					<span class="art"
+						><img
+							src="powered-by-nixos.gif"
+							width="88"
+							height="31"
+							alt="powered by NixOS, animated"
+						><img
+							src="powered-by-nixos.png"
+							width="88"
+							height="31"
+							alt="powered by NixOS"
+						></span
+					>
+					<figcaption>
+						<b>powered by NixOS</b
+						><a class="to" href="https://nixos.org/">nixos.org</a>
+					</figcaption>
+					<p class="files">
+						<a href="powered-by-nixos.gif" download>gif</a>
+						<a href="powered-by-nixos.webp" download>webp</a>
+						<a href="powered-by-nixos.png" download>png</a>
+						<a href="powered-by-nixos@2x.gif" download>2× gif</a>
+						<a href="powered-by-nixos@2x.webp" download>2× webp</a>
+						<a href="powered-by-nixos@2x.png" download>2× png</a>
+					</p>
+				</figure>
+			</section>
+		</main>
+	</body>
+</html>
